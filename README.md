@@ -1,0 +1,1 @@
+# calcular_potencia_rede_fttx
