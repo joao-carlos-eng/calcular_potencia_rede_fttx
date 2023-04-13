@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>exemplo-rede-fttx.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl0</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="m_ylw-pushpin301">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin41</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl2100</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_donut70">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_donut11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_donut80</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin720">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin771</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin820</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin73">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin7200</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin85</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin740">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin760</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin83</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_ylw-pushpin7510">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin670</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin730</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin41">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-diamond.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-diamond-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffffff00</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl0">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl2100">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-diamond.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>http://maps.google.com/mapfiles/kml/paddle/red-diamond-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="sh_donut80">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin730">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin820">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>0</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin83">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin85">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_donut11">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/donut.png</href>
+			</Icon>
+		</IconStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin670">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffff</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin7200">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin760">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>4</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin771">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ff55</color>
+			<width>0</width>
+		</LineStyle>
+	</Style>
+	<Folder>
+		<name>exemplo-rede-fttx</name>
+		<open>1</open>
+		<Folder>
+			<name>FTTx</name>
+			<Placemark>
+				<name>pop</name>
+				<LookAt>
+					<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+					<longitude>-39.57926151545092</longitude>
+					<latitude>-3.988982559557196</latitude>
+					<altitude>0</altitude>
+					<heading>0.000117008983193955</heading>
+					<tilt>0</tilt>
+					<range>319.4152898656402</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#m_ylw-pushpin</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-39.57911885557474,-3.988987830802047,0</coordinates>
+				</Point>
+			</Placemark>
+			<Folder>
+				<name>BKB</name>
+				<open>1</open>
+				<Placemark>
+					<name>bkb 01</name>
+					<styleUrl>#m_ylw-pushpin0</styleUrl>
+					<LineString>
+						<tessellate>1</tessellate>
+						<coordinates>
+							-39.57911673927172,-3.988966746963778,0 -39.57905956930172,-3.989034242632311,0 -39.57905109509591,-3.989371792681704,0 -39.57901910472392,-3.989589760538381,0 -39.57903374407098,-3.989793155263825,0 
+						</coordinates>
+					</LineString>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>CEOs</name>
+				<Placemark>
+					<name>HUB</name>
+					<open>1</open>
+					<LookAt>
+						<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+						<longitude>-39.57851804323111</longitude>
+						<latitude>-3.989488158502819</latitude>
+						<altitude>0</altitude>
+						<heading>0.1367355576742605</heading>
+						<tilt>30.00157294380527</tilt>
+						<range>350.2071621719778</range>
+						<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+					</LookAt>
+					<styleUrl>#msn_donut70</styleUrl>
+					<Point>
+						<gx:drawOrder>1</gx:drawOrder>
+						<coordinates>-39.57903350859049,-3.989794797514536,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Folder>
+				<name>placa 1</name>
+				<Folder>
+					<name>ramal 1</name>
+					<Folder>
+						<name>cb</name>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin720</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.57901238711182,-3.989790198781233,0 -39.57898824641716,-3.990235693289104,0 -39.57900108455091,-3.990589107676722,0 -39.57873332651305,-3.990489626338248,0 -39.57851877417971,-3.990495722951659,0 -39.57810771855479,-3.990394527674656,0 -39.57809728217686,-3.990791338818437,0 -39.57794394016258,-3.990991521494969,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin73</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.57810234557193,-3.990416353705633,0 -39.57790578742537,-3.990356816926941,0 -39.5774232785938,-3.990275057624674,0 -39.57717684687891,-3.990242105046202,0 -39.5769380037077,-3.990157272197264,0 -39.57652519944271,-3.990106543338448,0 -39.57623710701041,-3.989995403474368,0 -39.57584616788707,-3.990002761197822,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin740</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.57901978680526,-3.989771439457157,0 -39.57897776090429,-3.99024138642704,0 -39.57900312480319,-3.990573397451354,0 -39.57873598530244,-3.990510950635505,0 -39.57848986305207,-3.990501160927221,0 -39.57811719145111,-3.990399956200782,0 -39.57804232839646,-3.990781543396513,0 -39.577939564955,-3.990977247534452,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin740</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.57902336229549,-3.989768396602615,0 -39.57857660836493,-3.989719645230724,0 -39.57822090138983,-3.98970964332787,0 -39.57779605421111,-3.989665819833006,0 -39.57753565868541,-3.989661043886263,0 -39.5771248697431,-3.989690912440432,0 -39.57670403820798,-3.989652567328206,0 -39.57639723550049,-3.989607699338463,0 -39.57599626508603,-3.989580160011324,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+					</Folder>
+					<Folder>
+						<name>cx</name>
+						<open>1</open>
+						<Placemark>
+							<name>AA</name>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.577624138752</longitude>
+								<latitude>-3.990069126567002</latitude>
+								<altitude>0</altitude>
+								<heading>0.0008505858381122541</heading>
+								<tilt>34.22943964960673</tilt>
+								<range>481.1159571138267</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.5758662519886,-3.990060305913486,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.577624138752</longitude>
+								<latitude>-3.990069126567002</latitude>
+								<altitude>0</altitude>
+								<heading>0.0008505858381122541</heading>
+								<tilt>34.22943964960673</tilt>
+								<range>481.1159571138267</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57810837320175,-3.99043810452626,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57968969935126</longitude>
+								<latitude>-3.990416725977461</latitude>
+								<altitude>0</altitude>
+								<heading>0.002478843149840178</heading>
+								<tilt>30.00190337460893</tilt>
+								<range>423.7886258372533</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57899655105052,-3.990622647411576,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57819457769904</longitude>
+								<latitude>-3.989948816693576</latitude>
+								<altitude>0</altitude>
+								<heading>0.001785843244093148</heading>
+								<tilt>30.97445311845588</tilt>
+								<range>627.1106282400533</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57795981501609,-3.991005526907609,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57819457769904</longitude>
+								<latitude>-3.989948816693576</latitude>
+								<altitude>0</altitude>
+								<heading>0.001785843244093148</heading>
+								<tilt>30.97445311845588</tilt>
+								<range>627.1106282400533</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57820396609554,-3.989712744848217,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57819457769904</longitude>
+								<latitude>-3.989948816693576</latitude>
+								<altitude>0</altitude>
+								<heading>0.001785843244093148</heading>
+								<tilt>30.97445311845588</tilt>
+								<range>627.1106282400533</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57716660294011,-3.990282987609415,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57626845490672</longitude>
+								<latitude>-3.989809111363201</latitude>
+								<altitude>0</altitude>
+								<heading>0.002794940406716474</heading>
+								<tilt>28.43004001239951</tilt>
+								<range>904.0681714064469</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57707719855426,-3.989754090927925,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57745382274614</longitude>
+								<latitude>-3.989197443119018</latitude>
+								<altitude>0</altitude>
+								<heading>0.003251103439191582</heading>
+								<tilt>28.2724470620814</tilt>
+								<range>571.3632462413943</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57602635871888,-3.98968781615253,0</coordinates>
+							</Point>
+						</Placemark>
+					</Folder>
+				</Folder>
+				<Folder>
+					<name>ramal 2</name>
+					<Folder>
+						<name>cb</name>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin7510</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.57900556574339,-3.989765746954745,0 -39.57942983798463,-3.989757208878252,0 -39.57976649794592,-3.989784151730999,0 -39.57998619501182,-3.98980438802467,0 -39.57990058478702,-3.990104548320677,0 -39.57982681934836,-3.990477715455917,0 -39.57993595408338,-3.990702951859538,0 -39.58041630461071,-3.990677347767646,0 -39.5807630875305,-3.990418185437508,0 -39.58110022832381,-3.990473307499645,0 -39.58143825237213,-3.990453432667388,0 -39.58180180968002,-3.990545066645721,0 -39.58217483354819,-3.990736919410613,0 -39.58261163868327,-3.990956268938401,0 -39.58286184201929,-3.991063030718691,0 -39.58316091407429,-3.99120272820688,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin7510</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.57997940965837,-3.98981684683403,0 -39.5803367216537,-3.989829967432425,0 -39.58051453623833,-3.989929085319091,0 -39.58073789024979,-3.989885748838252,0 -39.5812386282121,-3.989961752304789,0 -39.58162626789842,-3.98998141838074,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+						<Placemark>
+							<name>Caminho sem título</name>
+							<styleUrl>#msn_ylw-pushpin7510</styleUrl>
+							<LineString>
+								<tessellate>1</tessellate>
+								<coordinates>
+									-39.58056121213412,-3.989893486100926,0 -39.58044711224038,-3.990191929151446,0 
+								</coordinates>
+							</LineString>
+						</Placemark>
+					</Folder>
+					<Folder>
+						<name>cx</name>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.57994440486521</longitude>
+								<latitude>-3.989867401159233</latitude>
+								<altitude>0</altitude>
+								<heading>0.002496487878929054</heading>
+								<tilt>30.00150756920653</tilt>
+								<range>335.6722903115352</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57943534773643,-3.989823713874169,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.58036538874684</longitude>
+								<latitude>-3.990730075433726</latitude>
+								<altitude>0</altitude>
+								<heading>0.002525872668520173</heading>
+								<tilt>30.00190337460891</tilt>
+								<range>423.7886258385522</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.57997282093181,-3.990765559677421,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.58126318746864</longitude>
+								<latitude>-3.990837215251296</latitude>
+								<altitude>0</altitude>
+								<heading>0.002588363855025096</heading>
+								<tilt>30.00190337460893</tilt>
+								<range>423.7886258357132</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.58112370541335,-3.990538079262746,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.58147954530706</longitude>
+								<latitude>-3.990734499121081</latitude>
+								<altitude>0</altitude>
+								<heading>0.002603423819392155</heading>
+								<tilt>30.00190337460893</tilt>
+								<range>423.7886258396469</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.58218598086521,-3.99079823227716,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.58199896071286</longitude>
+								<latitude>-3.990839258264602</latitude>
+								<altitude>0</altitude>
+								<heading>0.00263957807230747</heading>
+								<tilt>30.00190337460898</tilt>
+								<range>423.7886258392381</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.58316158989294,-3.991272297897569,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.58052817004137</longitude>
+								<latitude>-3.990106024750113</latitude>
+								<altitude>0</altitude>
+								<heading>0.002537253239755507</heading>
+								<tilt>30.00149948751674</tilt>
+								<range>333.8173421871095</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.58047904411244,-3.990261161393476,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.5809203482307</longitude>
+								<latitude>-3.989874751257579</latitude>
+								<altitude>0</altitude>
+								<heading>0.002564550263019261</heading>
+								<tilt>30.00149948751674</tilt>
+								<range>333.8173421909202</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.58077080437025,-3.989943272714021,0</coordinates>
+							</Point>
+						</Placemark>
+						<Placemark>
+							<open>1</open>
+							<LookAt>
+								<gx:TimeStamp><when>2018-07-03T11:43:00Z</when>
+</gx:TimeStamp>
+								<longitude>-39.58137897592301</longitude>
+								<latitude>-3.990089620555661</latitude>
+								<altitude>0</altitude>
+								<heading>0.002596468367371461</heading>
+								<tilt>30.00149948751671</tilt>
+								<range>333.8173421863968</range>
+								<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+							</LookAt>
+							<styleUrl>#m_ylw-pushpin301</styleUrl>
+							<Point>
+								<gx:drawOrder>1</gx:drawOrder>
+								<coordinates>-39.58164341237611,-3.990030989358803,0</coordinates>
+							</Point>
+						</Placemark>
+					</Folder>
+				</Folder>
+				<Folder>
+					<name>ramal 3</name>
+				</Folder>
+				<Folder>
+					<name>ramal 4</name>
+				</Folder>
+				<Folder>
+					<name>ramal 5</name>
+				</Folder>
+				<Folder>
+					<name>ramal 6</name>
+				</Folder>
+				<Folder>
+					<name>ramal 7</name>
+				</Folder>
+				<Folder>
+					<name>ramal 8</name>
+				</Folder>
+			</Folder>
+			<Folder>
+				<name>placa 2</name>
+				<open>1</open>
+			</Folder>
+			<Folder>
+				<name>placa 3</name>
+				<open>1</open>
+			</Folder>
+		</Folder>
+		<Folder>
+			<name>mapeamento</name>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

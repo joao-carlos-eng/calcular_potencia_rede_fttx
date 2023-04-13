@@ -1,0 +1,2806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>mapeamento.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.18182</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Folder>
+		<name>mapeamento</name>
+		<Placemark>
+			<name>CE-253, 828, Tejuçuoca - CE, 62610-000, Brasil</name>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583187,-3.991243,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58288,-3.9910905,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582607,-3.9909885,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582207,-3.9907744,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581787,-3.9906342,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581482,-3.990515199999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58115,-3.9904966,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580772,-3.9904432,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E,&#160; C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580444,-3.9906633,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580498,-3.990242,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, E, C1, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580563,-3.9899209,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580784,-3.9899344,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C16, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58129,-3.9899833,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581654,-3.9900415,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C1, TR - TY0116, COM CHAVE, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58171,-3.9897892,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/0, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582096,-3.9900808,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580387,-3.9898627,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58003,-3.9898527,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579754,-3.989852,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57945,-3.989823299999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579437,-3.9896235,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579468,-3.989369,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10, C11, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57944,-3.9891427,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10, C6, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579784,-3.989159,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300, 10, C7, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58012,-3.989261,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580467,-3.989349,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10, C0, ENEL MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580517,-3.9893098,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580757,-3.989423,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10, C0, ENEL MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58096,-3.9894025,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C13, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581154,-3.9894798,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C13, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581505,-3.989575,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5, E, C2, ENEL <u>MEDIA</u> TEN&#199;&#195;O]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581715,-3.9895885,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/11, C0, CHAVE-KJ0433, ENEL MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581818,-3.9895244,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58184,-3.9896212,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582123,-3.9896789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5. C1, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58233,-3.989735,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10, E, C0, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582523,-3.989793999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C1, ENEL BAIXA&#160; E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582603,-3.9898114,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582558,-3.9899926,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582893,-3.990152,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582783,-3.9904807,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C1, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582752,-3.9905357,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58299,-3.9905844,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58337,-3.9908612,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58332,-3.9905584,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58315,-3.9903543,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5, C2, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58259,-3.9894285,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5, C3, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58265,-3.9890704,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58242,-3.9890492,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581993,-3.9890306,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581673,-3.9889793,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581303,-3.988909200000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58094,-3.988809,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580578,-3.988728,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5. C1, TR- KJ9368, CHAVE, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58039,-3.9886985,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5. E, C8, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5802,-3.988637000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5. C6, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580204,-3.9889202,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579937,-3.9886253,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C15, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579582,-3.9885428,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579998,-3.9907327,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57961,-3.9906778,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57928,-3.9906473,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9,E, C6, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579018,-3.9906197,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57873,-3.9905531,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578506,-3.9905143,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, E, C6, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578136,-3.9904068,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57791,-3.9903545,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577427,-3.9903152,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577194,-3.990248,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57696,-3.990196500000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C13, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576565,-3.990128,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57627,-3.9900362,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.575874,-3.9900384,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C0, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.575897,-3.9896681,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57604,-3.989641,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57641,-3.9896362,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C18, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57672,-3.9896922,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57712,-3.989725,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57753,-3.9896536,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577812,-3.9896748,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C19, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578236,-3.9897099,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C20, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578575,-3.9897304,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9,&amp;#160; C12, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579044,-3.9898186,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57888,-3.9895616,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/11, C5, TR- KJ1782, CHAVE, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57902,-3.9895957,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/11, C11, ENEL BAIXA E M&#201;DIA&#160; <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579052,-3.9893699,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,&amp;#160; C12, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578766,-3.9893334,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57848,-3.9893162,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10, C14, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57822,-3.989345,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10, C14, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577904,-3.98926,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10, C16, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577507,-3.989236,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10, C2,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57729,-3.9891481,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10, C25,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5771,-3.989137,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10, C0, CHAVE- TY5246,&amp;#160; ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576958,-3.9891586,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10, C15,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57667,-3.9891024,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10, C16, CHAVE-TY9610,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576252,-3.989081000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10, E, C7,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.575977,-3.989028,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.575245,-3.9889076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57444,-3.9888837,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C9,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.574047,-3.9888554,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C0,&#160; ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573673,-3.9889839,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C1,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572945,-3.9891303,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10, C6,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572655,-3.9893699,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C2,&#160; ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572422,-3.9895413,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, <u>C6</u>,&#160; ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57596,-3.9887207,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57651,-3.9887924,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576504,-3.988578599999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C13, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57696,-3.9886687,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, E, C1, CHAVE-TY9902, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57701,-3.9886744,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577374,-3.9887357,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577713,-3.9888258,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578133,-3.9888573,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57856,-3.9889436,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, E, C2, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57893,-3.9890146,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/11, E, C11, ENEL BAIXA <u>E</u> MEDIA&#160; TEN&#199;&#195;O]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57906,-3.9890368,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/11, C0, TR-TY5080, CHAVE, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579254,-3.989089299999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10, E, C4, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578846,-3.988255,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C15, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578484,-3.9882362,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57815,-3.9881525,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C17, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577713,-3.988080000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 30/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57732,-3.9880226,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, E, C2, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577126,-3.988040199999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C8, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577057,-3.988221,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576923,-3.9879644,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/12, E, C0, ENEL MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576656,-3.987933,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576607,-3.988142,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9,&amp;#160; C9, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57657,-3.987887999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C6, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57627,-3.9878182,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 390/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577488,-3.987757,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C3, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57739,-3.987429,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577446,-3.9873257,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9 ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577827,-3.9871125,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5778,-3.9870284,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57752,-3.9870179,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/9, C3, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577175,-3.9870462,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576817,-3.9870634,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576523,-3.987082,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578197,-3.9870462,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/11, C2, TR-TY2945, CHAVE, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578266,-3.986963,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. E, C7, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5785,-3.9869416,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. E, C3, ENEL BAIXA E MEDIA&#160; <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578503,-3.9869807,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C11, ENEL BAIXA E <u>MEDIA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57902,-3.9870188,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C9, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57917,-3.987017600000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579166,-3.987346000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/11, E, C0, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579494,-3.9874659,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5. C6, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57949,-3.9873974,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C0, ENEL MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579647,-3.987413,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 699/12, C0, ENEL MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579758,-3.9874642,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579895,-3.9874585,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C0, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579933,-3.9873755,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579956,-3.9871507,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579994,-3.9869444,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580082,-3.9868302,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C7, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58008,-3.9863992,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C12, ENEL BAIXA E <u>MEDIA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57984,-3.9864106,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. E, C4, CHAVE-TY4340,&amp;#160; ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57953,-3.986431,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5, C1, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579536,-3.9865727,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5. C3, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579487,-3.9869046,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5. C0, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5795,-3.98717,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/19,5. C10, ENEL BAIXA E <u>MEDIA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57921,-3.986461,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,5. C10, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5792,-3.9866967,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579014,-3.9861708,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579098,-3.9859216,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579113,-3.985685,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578903,-3.98573,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C4, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5785,-3.9857442,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C5, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57851,-3.9859915,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578842,-3.985957,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578857,-3.9862683,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578884,-3.9864757,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/10,5. C11, TR-KJ7209, CHAVE, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580254,-3.986367,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58058,-3.9863477,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C20, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58104,-3.9863203,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C15, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581417,-3.98635,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581703,-3.986433,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/9, C9, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58202,-3.9866414,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58218,-3.9867613,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582436,-3.9864235,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582,-3.986996,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C13, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581787,-3.987255999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581554,-3.987564,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581375,-3.9877906,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581184,-3.9880388,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 30/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580887,-3.9884183,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580654,-3.9887176,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580273,-3.988228,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C13, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58033,-3.9879076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580387,-3.987533,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C15, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58049,-3.987136,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C17, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580593,-3.9867344,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58132,-3.9866898,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581177,-3.9870212,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C0, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581173,-3.9870667,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.581455,-3.9873345,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58101,-3.9873588,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C17, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58087,-3.987707,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58072,-3.987987,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10, C4, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58002,-3.9896405,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600,10,5. C3, TR-KJ0425, CHAVE, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.580048,-3.9894397,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57992,-3.9901612,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57988,-3.99052,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5. C2, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57201,-3.9897225,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5. C5, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57171,-3.9899726,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C3, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57156,-3.9897795,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571205,-3.9894571,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571266,-3.9897795,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5. C1, TR- TY4331, CHAVE, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571484,-3.990083,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C3, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571156,-3.9902756,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C5, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57088,-3.990406,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C0, ENEL MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.570442,-3.9905708,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. E.&amp;#160; C0, ENEL MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.570026,-3.9908843,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C1, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.570305,-3.9912796,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57022,-3.991369999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C4, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57069,-3.9911313,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA E <u>MEDIA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57084,-3.9909885,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, CHAVE-TY4430, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571117,-3.9907737,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5. C6, TR- KJ8205, CHAVE, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571377,-3.9906335,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571453,-3.990741700000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571587,-3.9909778,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571613,-3.990504,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571712,-3.9903104,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C5, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572083,-3.990298500000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C1, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572346,-3.9901328,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572548,-3.9902713,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572548,-3.9900243,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/0,5. C6, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.570786,-3.9915226,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C5, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57102,-3.991793599999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C2, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571114,-3.9920795,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. E, C3, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571266,-3.9924111,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571556,-3.9922059,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C1, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57162,-3.9924927,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57195,-3.992425,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C5, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57179,-3.992782,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57202,-3.9926953,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/12, E, C0, TR-T1067653, CHAVE, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57149,-3.9927146,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/10,5, E, C0, TR- TY5084, CHAVE, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571358,-3.9924998,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57171,-3.9921792,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572056,-3.9921472,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5716,-3.992052999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57182,-3.9919033,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572037,-3.9917889,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C1, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.571907,-3.9915676,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57181,-3.9912608,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.570915,-3.9921372,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/9, C3,</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57073,-3.9918897,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572544,-3.9892578,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C0, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5727,-3.9890726,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 50/9, C0, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572834,-3.9889839,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573208,-3.9888415,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C0, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57259,-3.9887502,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C5, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572277,-3.988807,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C2, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572315,-3.9884574,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584305,-3.987062,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10,5. C2, ENEL BAIXA E MEDIA&#160; TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57242,-3.9881537,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C2, ENEL BAIXA E MEDIA&#160; TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572464,-3.987860400000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573826,-3.986969,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57336,-3.987124,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57312,-3.9873285,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C2, TR- TY9879, CHAVE, ENEL BAIXA E MEDIA&#160; TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572742,-3.9876204,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C2, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573284,-3.9876173,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57303,-3.9877493,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL <u>BAIXA</u> TEN&#199;&#195;O]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573605,-3.98749,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL <u>BAIXA</u> TEN&#199;&#195;O]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573875,-3.9873943,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573727,-3.9878986,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573463,-3.987997,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.573223,-3.9880872,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C3, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.572063,-3.988575,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579334,-3.9902577,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57818,-3.989993,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578056,-3.990788199999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57797,-3.9909654,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12,&#160; C5, ENEL BAIXA E MEDIA&#160; TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582672,-3.988718,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C8, ENEL BAIXA E MEDIA&#160; TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582764,-3.9883344,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/12, C9, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582806,-3.988069499999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, E, C12, ENEL BAIXA E <u>MEDIA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582832,-3.9878678,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58315,-3.9884717,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583416,-3.9884953,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C6, TR- TY3950, CHAVE, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58305,-3.987879,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C8, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583282,-3.9878674,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C11, CHAVE- TY6001, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58363,-3.987843799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C9, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583908,-3.987754,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. E, C4, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584194,-3.987594,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C8, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58447,-3.9874413,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C4, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584618,-3.987341600000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C6, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584938,-3.9871943,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C7, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585114,-3.9870615,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C3, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585407,-3.986894599999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C4, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585724,-3.9867306,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10, C6, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585926,-3.986612800000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586216,-3.9864526,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586403,-3.9866385,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C0, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586536,-3.986594000000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586815,-3.9864457,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C1, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58714,-3.986261,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58651,-3.9868252,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586338,-3.9869254,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586044,-3.9870825,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585823,-3.9872022,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,5. C1, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585552,-3.98713,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, E, C0, TR- TY0002, CHAVE, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585644,-3.9872854,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585636,-3.98732,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10,5. C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585323,-3.9874868,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10,5. C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585155,-3.9875748,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C7, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584843,-3.98775,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585102,-3.988155799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[O 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5854,-3.987968400000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P ,150/10,5. C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585606,-3.987853,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58587,-3.9876876,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.585827,-3.9877431,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10,5. C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58576,-3.9875007,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10,5. C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58606,-3.9875789,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/10,5. C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586323,-3.987463700000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.586704,-3.9872317,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584145,-3.987414,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.584038,-3.9871688,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C10, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58456,-3.9869647,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58396,-3.987188600000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583897,-3.987002599999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583397,-3.9867842,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583828,-3.9867802,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583233,-3.986807799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583588,-3.98723,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, C0, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58373,-3.9872737,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.583138,-3.9871678,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58305,-3.987354299999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58289,-3.9871955,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582558,-3.9870927,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58264,-3.9868648,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582737,-3.986613499999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5825,-3.9873059,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58245,-3.987520700000001,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582363,-3.987844,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C7, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582367,-3.987878,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, E, C18, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58227,-3.9882414,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C16, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.58169,-3.9880886,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.582127,-3.9886527,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5819,-3.987783,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578197,-3.9884796,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57814,-3.9796042,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. E, C0, CHAVE- TY5592, ENEL BAIXA E MEDIA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578133,-3.978992,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C1, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57778,-3.9790094,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/12, C2, TR- TY5593, CHAVE, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577377,-3.9790363,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C9, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5774,-3.9794152,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577427,-3.9797506,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577488,-3.9802568,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578175,-3.9801607,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578136,-3.9805865,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578194,-3.9809203,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57822,-3.9812443,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57822,-3.9816658,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578213,-3.9821634,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10, C0, CHAVE, ENEL media TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57834,-3.9821577,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C6, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578007,-3.9819248,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5777,-3.9820087,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57755,-3.982040599999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5, C4, TR- KJ1960, CHAVE, ENEL BAIXA E MEDIA&amp;#160; TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577152,-3.98214,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57686,-3.9822314,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576653,-3.9822917,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57678,-3.9818318,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C0, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.576763,-3.981587199999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C2, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577,-3.981528,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C5, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577282,-3.981578799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C3, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57762,-3.9812715,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577656,-3.9815545,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C1, ENEL BAIXA <u>TEN&#199;&#195;O</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57838,-3.9818788,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57826,-3.9826634,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C0, ENEL MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57836,-3.983061999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Rod. Francisco Silva Mota, 123, Tejuçuoca - CE, 62610-000, Brasil</name>
+			<description><![CDATA[P 300/9, C4, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57828,-3.9830608,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C1, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578316,-3.9834356,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,5. C1, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578297,-3.9837718,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C0, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578312,-3.9840803,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, E, C4, ENEL BAIXA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578373,-3.9840872,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/9, E, C10, ENEL BAIXA TEN&amp;#199;&amp;#195;O COM LUMINARIA</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57894,-3.9840803,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C11, ENEL <u>BAIXA</u> TEN&#199;&#195;O COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578945,-3.984434799999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C8, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578835,-3.9837291,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, E, C9, ENEL BAIXA <u>TEN&#199;&#195;O</u> COM LUMINARIA]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579224,-3.9840627,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C14, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57932,-3.984476,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C12, ENEL BAIXA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579285,-3.983696,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,5. C2, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578323,-3.984545,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,5. C4, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57833,-3.984951,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C3, TR- KJ2347, CHAVE, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578323,-3.9852433,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. E, C6, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578342,-3.9854074,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/12, C2, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577312,-3.985514999999999,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 600/12, C2, CHAVE- KJ3264, ENEL BAIXA E MEDIA TEN&#199;&#195;O COM <u>LUMINARIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577465,-3.9854958,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/10,5. C7, ENEL BAIXA E MEDIA TEN&#199;&#195;O&#160; COM <u>LUMINRIA</u>]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.577854,-3.9854217,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C1, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57834,-3.985609,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C4, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578377,-3.9859943,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/0,5. C7, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.5784,-3.986372,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C6, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57845,-3.9867387,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 150/10,5. C0, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578655,-3.9875326,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C2, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578747,-3.9878721,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 30/9, C4, ENEL BAIXA&amp;#160; TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579086,-3.988688,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 600/12, C7, TR,- KJ1790, CHAVE, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578903,-3.9884632,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description>P 300/10,5. C6, ENEL BAIXA E MEDIA TEN&amp;#199;&amp;#195;O</description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.578957,-3.9887745,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 300/9, C7, ENEL <u>BAIXA</u> TEN&#199;&#195;O]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.57885,-3.9899328,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<description><![CDATA[P 150/9, C6, ENEL <u>BAIXA</u> TEN&#199;&#195;O]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Point>
+				<coordinates>-39.579,-3.990219800000001,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
