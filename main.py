@@ -1,4 +1,3 @@
-import math
 from coordinate_correction import correct_coordinates
 from data_extraction import extract_cxs_and_cbs, extract_data
 
@@ -10,12 +9,22 @@ from utilities import (
 )
 
 # Função principal
+
+
 def main():
     # Ler o arquivo KML
     kml = read_kml('exemplo-rede-fttx.kml')
 
     # Extrair as informações de pop, postes, bkbs, ceos, placas, ramais, cbs e cxs
-    pop, postes, bkbs, ceos, placas, ramais, cbs, cxs = extract_data(kml)
+    data = extract_data(kml)
+    pop = data['pop']
+    postes = data['postes']
+    bkbs = data['bkbs']
+    ceos = data['ceos']
+    placas = data['placas']
+    ramais = data['ramais']
+    cbs = data['cbs']
+    cxs = data['cxs']
 
     # Extrair todas as caixas e trajetos dos ramais
     caixas, trajetos = extract_cxs_and_cbs(ramais)
@@ -25,13 +34,13 @@ def main():
     correct_coordinates(postes, caixas, trajetos, raio)
 
     # Criar as rotas dos cabos com base nas linhas do arquivo KML
-    rotas = create_cable_routes(trajetos)
+    rotas = create_cable_routes(pop, trajetos, bkbs, ceos, ramais)
 
     # Calcular as abordagens dos cabos com base nas caixas
     calculate_cable_approaches(caixas)
 
     # Simular a transmissão de sinal e calcular as perdas de sinal
-    simulate_signal_transmission(pop, postes, rotas, caixas)
+    simulate_signal_transmission(pop, rotas, caixas)
 
 
 if __name__ == '__main__':
