@@ -10,7 +10,31 @@ def distancia_dois_pontos(ponto1, ponto2):
 
 
 def correct_coordinates(postes, caixas, trajetos, raio):
+    """
+    Corrige as coordenadas das caixas e dos trajetos dos postes utilizando o método OSNAP.
+
+    Args:
+        postes (list): Lista de coordenadas dos postes.
+        caixas (list): Lista de coordenadas das caixas.
+        trajetos (list): Lista de coordenadas dos trajetos.
+        raio (float): Raio de aplicação do método OSNAP.
+
+    Returns:
+        None
+    """
+
     def apply_osnap(lista, string, raio):
+        """
+        Aplica o método OSNAP em uma string de coordenadas.
+
+        Args:
+            lista (list): Lista de coordenadas a serem comparadas.
+            string (str): String de coordenadas a serem corrigidas.
+            raio (float): Raio de aplicação do método OSNAP.
+
+        Returns:
+            str: String de coordenadas corrigidas pelo método OSNAP.
+        """
         out = ''
         lista2 = string.split()
         for i in lista2:
