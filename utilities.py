@@ -1,42 +1,44 @@
-def create_cable_routes(pop, trajetos, bkbs, ceos, ramais):
-    rotas = []
-    
-    # Conecte o POP aos bkbs
-    for bkb in bkbs:
-        rota_bkb = {
-            "start": pop["coordenadas"],
-            "end": bkb["coordenadas"],
-            "type": "bkb"
-        }
-        rotas.append(rota_bkb)
+# module utilities
+from coordinate_correction import distancia_dois_pontos
 
-    # Conecte os bkbs às ceos
+
+def create_cable_routes(pop, caixas, bkbs, ceos, ramais):
+    rotas = []
+
+    # Conecte o POP às caixas
+    for caixa in caixas:
+        rota_caixa = {
+            'start': pop['coordenadas'],
+            'end': caixa['coordenadas'],
+            'type': 'caixa',
+        }
+        rotas.append(rota_caixa)
+
+    # Conecte as caixas aos CEOs
     for ceo in ceos:
-        for bkb in bkbs:
-            if ceo["bkb_id"] == bkb["id"]:
+        for caixa in caixas:
+            if ceo['caixa_id'] == caixa['id']:
                 rota_ceo = {
-                    "start": bkb["coordenadas"],
-                    "end": ceo["coordenadas"],
-                    "type": "ceo"
+                    'start': caixa['coordenadas'],
+                    'end': ceo['coordenadas'],
+                    'type': 'ceo',
                 }
                 rotas.append(rota_ceo)
-                break
 
-    # Conecte as ceos aos ramais
+    # Conecte os CEOs aos ramais
     for ramal in ramais:
         for ceo in ceos:
-            if ramal["ceo_id"] == ceo["id"]:
+            if ramal['ceo_id'] == ceo['id']:
                 rota_ramal = {
-                    "start": ceo["coordenadas"],
-                    "end": ramal["coordenadas"],
-                    "type": "ramal"
+                    'start': ceo['coordenadas'],
+                    'end': ramal['cabos'][
+                        0
+                    ],  # o início do cabo é uma caixa de emenda
+                    'type': 'ramal',
                 }
                 rotas.append(rota_ramal)
-                break
 
     return rotas
-
-
 
 
 def calculate_cable_approaches(caixas):
@@ -47,22 +49,79 @@ def calculate_cable_approaches(caixas):
         caixa['abordagens'] = abordagens
 
 
-def simulate_signal_transmission(inicio, rotas, caixas):
-    # Implemente a lógica para simular a transmissão de sinal e calcular as perdas de sinal
-    total_loss = 0
+def calculate_connector_loss(connector_count, connector_loss):
+    return connector_count * connector_loss
 
-    for route in rotas:
-        start = route['start']
-        end = route['end']
 
-        # Calcular a distância entre o ponto inicial e o final do cabo
-        distance = distancia_dois_pontos(start, end)
+def calculate_splice_loss(splice_count, splice_loss):
+    return splice_count * splice_loss
 
-        # Calcular a perda de sinal para o cabo atual
-        # Aqui você pode adicionar sua lógica para calcular a perda de sinal com base na distância e outros fatores, como atenuação do cabo, etc.
-        cable_loss = calculate_cable_loss(distance)
 
-        # Atualizar a perda total de sinal
-        total_loss += cable_loss
+def calculate_cable_loss(cable_length, cable_attenuation):
+    return cable_length * cable_attenuation
 
-    return total_loss
+
+def calculate_splitter_loss(splitter):
+    return splitter['input'] - splitter['output']
+
+
+def calculate_total_loss(
+    connector_loss, splice_loss, cable_loss, splitter_loss
+):
+    return connector_loss + splice_loss + cable_loss + splitter_loss
+
+
+def calculate_final_signal(initial_signal, total_loss):
+    return initial_signal - total_loss
+
+
+def simulate_signal_transmission(pop, rotas, caixas):
+    initial_signal = float(input('Insira o sinal inicial (dBm): '))
+
+    # Parâmetros de perda (ajuste conforme necessário)
+    connector_loss = 0.5  # Perda por conector (dB)
+    splice_loss = 0.1     # Perda por emenda (dB)
+    cable_attenuation = 0.3  # Atenuação do cabo (dB/km)
+
+    for caixa in caixas:
+        # Inicializar perdas
+        connector_loss_total = 0
+        splice_loss_total = 0
+        cable_loss_total = 0
+
+        # Encontrar a rota que conecta a caixa atual
+        rota_caixa = None
+        for rota in rotas:
+            if rota['end'] == caixa['coordenadas']:
+                rota_caixa = rota
+                break
+
+        if rota_caixa:
+            # Exemplo: calcular perdas e sinal final para cada caixa
+            connector_count = 2
+            splice_count = 1
+
+            # Calcule o comprimento do cabo com base na distância entre as coordenadas inicial e final da rota
+            cable_length = (
+                distancia_dois_pontos(rota_caixa['start'], rota_caixa['end'])
+                / 1000
+            )  # Converter para km
+
+            connector_loss_total = calculate_connector_loss(
+                connector_count, connector_loss
+            )
+            splice_loss_total = calculate_splice_loss(
+                splice_count, splice_loss
+            )
+            cable_loss_total = calculate_cable_loss(
+                cable_length, cable_attenuation
+            )
+
+        total_loss = (
+            connector_loss_total + splice_loss_total + cable_loss_total
+        )
+        final_signal = calculate_final_signal(initial_signal, total_loss)
+
+        caixa['sinal_final'] = final_signal
+
+        print(f"Caixa {caixa['nome']}: Sinal final = {final_signal:.2f} dBm")
