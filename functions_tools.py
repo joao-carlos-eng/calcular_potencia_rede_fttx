@@ -17,7 +17,7 @@ def print_node(node, level=0):
             node_name = os.path.basename(node.attrib.get('href', ''))
 
         # Se ainda assim não houver nome, usa o tipo do elemento
-        if not node_name:
+        if not node_name and node.tag.endswith('Placemark'):
             node_name = node.tag.split('}')[-1]
 
         # Imprime o tipo do elemento e o nome com indentação
