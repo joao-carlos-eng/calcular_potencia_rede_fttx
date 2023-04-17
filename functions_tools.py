@@ -1,5 +1,5 @@
-import xml.etree.ElementTree as ET
 import os
+import xml.etree.ElementTree as ET
 
 
 def print_node(node, level=0):

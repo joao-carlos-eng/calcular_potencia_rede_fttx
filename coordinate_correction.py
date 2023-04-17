@@ -1,7 +1,7 @@
 # calcular a distancia entre dois pontos
 
 
-from math import sin, cos, sqrt, atan2, radians
+from math import atan2, cos, radians, sin, sqrt
 
 
 def distancia_dois_pontos(lat1, lon1, lat2, lon2):
@@ -65,19 +65,34 @@ def correct_coordinates(postes, caixas, cabos, raio):
         else:
             key = 'poste'
 
-        for cord_n, cord in enumerate(list_cords_corrigir):  # para cada cordenada a ser corrigida (cord)
+        for cord_n, cord in enumerate(
+            list_cords_corrigir
+        ):  # para cada cordenada a ser corrigida (cord)
             x = cord.split(',')
-            for p_num, p in enumerate(pontos_referencia):  # para cada poste de referencia (p)
+            for p_num, p in enumerate(
+                pontos_referencia
+            ):  # para cada poste de referencia (p)
                 co = p['coordinates'].split(',')
                 if distancia_dois_pontos(co[0], co[1], x[0], x[1]) <= raio:
                     list_cords_corrigir[cord_n] = p['coordinates']
                     if key == 'postes':
-                        cord_a_corrigir[key][cord_n] = pontos_referencia[p_num]['name']
+                        cord_a_corrigir[key][cord_n] = pontos_referencia[
+                            p_num
+                        ]['name']
                     else:
                         cord_a_corrigir[key] = pontos_referencia[p_num]['name']
                     break
+            if cord_a_corrigir[key] is None:
+                print(
+                    'Nenhum poste encontrado para a coordenada: ',
+                    cord,
+                    'do objeto: ',
+                    cord_a_corrigir['name'],
+                )
+                return
 
         cord_corrigido = []
+
         for a, b in zip(list_cords_corrigir, cord_a_corrigir[key]):
             if b is not None:
                 cord_corrigido.append(a)
@@ -95,6 +110,8 @@ def correct_coordinates(postes, caixas, cabos, raio):
     # Corrigir o trajeto dos cabos
     for cabo in cabos:
         print('testando cabo: ', cabo['name'])
-        cabo['postes'] = [None for _ in range(len(cabo['coordinates'].split(' ')))]
+        cabo['postes'] = [
+            None for _ in range(len(cabo['coordinates'].split(' ')))
+        ]
         cabo['coordinates'] = apply_osnap(postes, cabo, raio)
         cabo['postes'] = [p for p in cabo['postes'] if p is not None]

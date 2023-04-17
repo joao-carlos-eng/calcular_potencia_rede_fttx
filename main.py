@@ -1,14 +1,8 @@
 from coordinate_correction import correct_coordinates
 from data_extraction import extract_cxs_and_cbs, extract_data
-
 from file_handling import read_kml
-from utilities import (
-    calculate_cable_approaches,
-    create_cable_routes,
-    simulate_signal_transmission,
-)
-
-# Função principal
+from route_generator import create_cable_routes
+from utilities import calculate_cable_approaches, simulate_signal_transmission
 
 
 def main():
@@ -27,14 +21,14 @@ def main():
     cxs = data['cxs']
 
     # Extrair todas as caixas e trajetos dos ramais
-    caixas, trajetos = extract_cxs_and_cbs(ramais)
+    caixas, cabos = extract_cxs_and_cbs(ramais)
 
     # Corrigir as coordenadas das caixas e trajeto dos postes
     raio = 5.0  # Define o raio de aplicação do osnap
-    correct_coordinates(postes, caixas, trajetos, raio)
+    correct_coordinates(postes, caixas, cabos, raio)
 
     # Criar as rotas dos cabos com base nas linhas do arquivo KML
-    rotas = create_cable_routes(pop, trajetos, bkbs, ceos, ramais)
+    rotas = create_cable_routes(pop, cabos, bkbs, ceos, ramais)
 
     # Calcular as abordagens dos cabos com base nas caixas
     calculate_cable_approaches(caixas)

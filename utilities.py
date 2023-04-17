@@ -2,45 +2,6 @@
 from coordinate_correction import distancia_dois_pontos
 
 
-def create_cable_routes(pop, caixas, bkbs, ceos, ramais):
-    rotas = []
-
-    # Conecte o POP às caixas
-    for caixa in caixas:
-        rota_caixa = {
-            'start': pop['coordenadas'],
-            'end': caixa['coordenadas'],
-            'type': 'caixa',
-        }
-        rotas.append(rota_caixa)
-
-    # Conecte as caixas aos CEOs
-    for ceo in ceos:
-        for caixa in caixas:
-            if ceo['caixa_id'] == caixa['id']:
-                rota_ceo = {
-                    'start': caixa['coordenadas'],
-                    'end': ceo['coordenadas'],
-                    'type': 'ceo',
-                }
-                rotas.append(rota_ceo)
-
-    # Conecte os CEOs aos ramais
-    for ramal in ramais:
-        for ceo in ceos:
-            if ramal['ceo_id'] == ceo['id']:
-                rota_ramal = {
-                    'start': ceo['coordenadas'],
-                    'end': ramal['cabos'][
-                        0
-                    ],  # o início do cabo é uma caixa de emenda
-                    'type': 'ramal',
-                }
-                rotas.append(rota_ramal)
-
-    return rotas
-
-
 def calculate_cable_approaches(caixas):
     for caixa in caixas:
         # Neste exemplo, vamos assumir que a quantidade de abordagens é igual ao número da caixa
@@ -80,7 +41,7 @@ def simulate_signal_transmission(pop, rotas, caixas):
 
     # Parâmetros de perda (ajuste conforme necessário)
     connector_loss = 0.5  # Perda por conector (dB)
-    splice_loss = 0.1     # Perda por emenda (dB)
+    splice_loss = 0.1  # Perda por emenda (dB)
     cable_attenuation = 0.3  # Atenuação do cabo (dB/km)
 
     for caixa in caixas:

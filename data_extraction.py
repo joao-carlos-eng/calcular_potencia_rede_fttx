@@ -30,6 +30,7 @@ def extract_data(kml):
                     pop = {
                         'name': placemark.name.text.strip(),
                         'coordinates': coordinates,
+                        'type': 'pop',
                     }
             for subsubfolder in fttx_folder.Folder:
                 subsubfolder_name = subsubfolder.name.text.lower()
@@ -39,13 +40,14 @@ def extract_data(kml):
                         try:
                             name = placemark.name.text.strip()
                         except AttributeError:
-                            name = f'BKB {subsubfolder.index(placemark)+1}'
+                            name = f'BKB {subsubfolder.index(placemark) + 1}'
                         coordinates = placemark_coordinates(placemark)
                         bkbs.append(
                             {
                                 'name': name,
                                 'coordinates': coordinates,
                                 'bkb_id': subsubfolder.index(placemark) + 1,
+                                'type': 'bkb',
                             }
                         )
                 elif subsubfolder_name in ['ceos', 'hubs']:
@@ -53,12 +55,14 @@ def extract_data(kml):
                         try:
                             name = placemark.name.text.strip()
                         except AttributeError:
-                            name = f'CEO {subsubfolder.index(placemark)+1}'
+                            name = f'CEO {subsubfolder.index(placemark) + 1}'
                         coordinates = placemark_coordinates(placemark)
+                        type_ = 'ceo' if subsubfolder_name == 'ceos' else 'hub'
                         ceos.append(
                             {
                                 'name': name,
                                 'coordinates': coordinates,
+                                'type': type_,
                             }
                         )
                 elif 'placa' in subsubfolder_name:
@@ -73,12 +77,17 @@ def extract_data(kml):
                                     'cxs': [],
                                     'cbs': [],
                                     'name': sub_placa.name.text.strip(),
+                                    'type': 'ramal',
                                 }
                                 try:
                                     for sub_ramal in sub_placa.Folder:
-                                        sub_ramal_name = sub_ramal.name.text.lower()
+                                        sub_ramal_name = (
+                                            sub_ramal.name.text.lower()
+                                        )
                                         if sub_ramal_name == 'cb':
-                                            for placemark in sub_ramal.Placemark:
+                                            for (
+                                                placemark
+                                            ) in sub_ramal.Placemark:
                                                 coordinates = (
                                                     placemark_coordinates(
                                                         placemark
@@ -88,19 +97,26 @@ def extract_data(kml):
                                                     {
                                                         'name': placemark.name.text.strip(),
                                                         'coordinates': coordinates,
+                                                        'type': 'cb',
                                                     }
                                                 )
-                                                cbs.append(ramal['cbs'][-1]) #verificar se é necessário
+                                                cbs.append(
+                                                    ramal['cbs'][-1]
+                                                )  # verificar se é necessário
                                         elif sub_ramal_name in [
                                             'cx',
                                             'naps',
                                             'ctos',
                                         ]:
-                                            for placemark in sub_ramal.Placemark:
+                                            for (
+                                                placemark
+                                            ) in sub_ramal.Placemark:
                                                 try:
-                                                    name = placemark.name.text.strip()
+                                                    name = (
+                                                        placemark.name.text.strip()
+                                                    )
                                                 except AttributeError:
-                                                    name = f'CX {sub_ramal.index(placemark)+1}'
+                                                    name = f'CX {sub_ramal.index(placemark) + 1}'
                                                 coordinates = (
                                                     placemark_coordinates(
                                                         placemark
@@ -110,10 +126,12 @@ def extract_data(kml):
                                                     {
                                                         'name': name,
                                                         'coordinates': coordinates,
+                                                        'type': 'nap',
                                                     }
                                                 )
-                                                cxs.append(ramal['cxs'][-1]) #verificar se é necessário
-                                                print(f'cx: {ramal["cxs"][-1]}')
+                                                cxs.append(
+                                                    ramal['cxs'][-1]
+                                                )  # verificar se é necessário
                                     ramais.append(ramal)
                                 except AttributeError:
                                     # erro quando não tem subpastas de ramais
@@ -122,18 +140,22 @@ def extract_data(kml):
                         # erro quando não tem subpastas de placas
                         pass
         elif subfolder_name == 'mapeamento' or subfolder_name == 'poste':
-            for placemark in subfolder.Placemark:
-                try:
-                    name = placemark.name.text.strip()
-                except AttributeError:
-                    name = f'Poste {subfolder.index(placemark)+1}'
-                coordinates = placemark_coordinates(placemark)
-                postes.append(
-                    {
-                        'name': name,
-                        'coordinates': coordinates,
-                    }
-                )
+            try:
+                for placemark in subfolder.Placemark:
+                    try:
+                        name = placemark.name.text.strip()
+                    except AttributeError:
+                        name = f'Poste {subfolder.index(placemark) + 1}'
+                    coordinates = placemark_coordinates(placemark)
+                    postes.append(
+                        {
+                            'name': name,
+                            'coordinates': coordinates,
+                            'type': 'poste',
+                        }
+                    )
+            except AttributeError:
+                print('Não há postes no arquivo KML.')
 
     return {
         'pop': pop,
@@ -160,12 +182,12 @@ def extract_cxs_and_cbs(ramais):
         - trajetos: informações sobre os trajetos encontrados nos ramais.
     """
     caixas = []
-    trajetos = []
+    cabos = []
     for ramal in ramais:
-        print(f'ramal: {ramal}')
+        print(f'ramal: {ramal["name"]}')
         for cx in ramal['cxs']:
             caixas.append(cx)
         for cb in ramal['cbs']:
-            trajetos.append(cb)
+            cabos.append(cb)
 
-    return caixas, trajetos
+    return caixas, cabos
