@@ -1,71 +1,110 @@
-"""
-Vamos começar criando a função create_cable_routes que receberá como parâmetros o dicionário pop, uma lista de dicionários caixas, uma lista de dicionários cabos, uma lista de dicionários postes, uma lista de dicionários hubs e uma lista de dicionários ceos.
+def create_cables_routers(pop, postes, cabos, caixas, ceos, hubs):
+    # Inicializa variáveis
+    routers = {}
+    router_count = 0
 
-Dentro da função, vamos criar um dicionário chamado coordinates_dict para guardar as coordenadas de cada objeto. Em seguida, vamos criar um dicionário chamado objects_dict para guardar todas as informações de cada objeto (caixas, postes, hubs e ceos) e o objeto em si.
+    # Busca cabos que partem do POP
+    for cabo in cabos:
+        if cabo['type'] == 'bkb' and cabo['coordinates'].startswith(pop['coordinates']):
+            router_count += 1
+            start = pop['name']
+            end = None
+            router = [pop['name']]
+            cable = [cabo['name']]
+            coordinates = cabo['coordinates'].split()
+            print(f'cabo: {cabo["name"]}')
+            # percorre a lista de coordenadas procurando interceptações do cabo
+            for coordinate in coordinates:
+                # Percorre a lista de postes procurando interceptações do cabo
+                for poste in postes:
+                    if poste['coordinates'] == coordinate:
+                        print(poste['name'])
+                        router.append(poste['name'])
 
-Com o objects_dict criado, vamos percorrer a lista de cabos e para cada cabo, vamos criar uma lista de coordenadas a partir dos postes e caixas que fazem parte desse cabo. Depois, vamos adicionar essa lista de coordenadas ao coordinates_dict, para que possamos acessá-la mais facilmente quando criarmos as rotas.
+                # Percorre a lista de caixas procurando interceptações do cabo
+                for caixa in caixas:
+                    if caixa['coordinates'] == coordinate:
+                        print(caixa['name'])
+                        router.append(caixa['name'])
+                        end = caixa['name']
+                        routers[cabo['name']] = {
+                            'start': start,
+                            'end': end,
+                            'router': router,
+                            'cable': cable,
+                            'coordinates': coordinates,
+                        }
 
-Por fim, vamos percorrer a lista de caixas e para cada caixa, vamos criar uma rota partindo do pop até a caixa em questão. Para isso, vamos utilizar o algoritmo de Dijkstra para encontrar o caminho mais curto entre os dois pontos, usando a lista de coordenadas e o objects_dict.
+                # Percorre a lista de CEO+HUBs procurando interceptações do cabo
+                for ceo_hub in ceos + hubs:
+                    if ceo_hub['coordinates'] == coordinate:
+                        print(ceo_hub['type'])
+                        router.append(ceo_hub['name'])
 
-Durante a criação da rota, vamos adicionar as informações dos objetos (postes, hubs e ceos) pelos quais o cabo passa e a lista de cabos que fazem parte dessa rota. Por fim, vamos adicionar a rota ao resultado final.
-"""
-from typing import Dict, List
+                        # Percorre a lista de cabos novamente procurando ramificações
+                        for ramal in cabos:
+                            print(f'routers: {routers}')
+                            if ramal['type'] == 'ramal' and ramal['coordinates'].startswith(ceo_hub['coordinates']):
+                                new_router_count = router_count + 1
+                                new_router = list(router)
+                                new_cable = list(cable)
+                                new_coordinates = ramal['coordinates'].split()
+                                new_end = None
 
+                                # Percorre a lista de postes procurando interceptações do ramal
+                                print(f'ramal: {ramal["name"]}')
+                                for new_coordinate in new_coordinates:
+                                    # Percorre a lista de postes procurando interceptações do ramal
+                                    for poste in postes:
+                                        if poste['coordinates'] == new_coordinate:
+                                            print(poste['name'])
+                                            new_router.append(poste['name'])
+                                            break
 
-def create_cable_routes(
-        pop: Dict[str, str],
-        devices: List[Dict[str, str]],
-        cables: List[Dict[str, str]]
-) -> List[Dict[str, List[str]]]:
-    # Criar dicionários que mapeiam o nome de cada dispositivo e cabo para seus respectivos dicionários
-    device_dict = {device["name"]: device for device in devices}
-    cable_dict = {cable["name"]: cable for cable in cables}
+                                    # Percorre a lista de NAPs procurando interceptações do ramal
+                                    for nap in caixas:
+                                        # Se a caixa for do tipo CTO/NAP, cria rota até o NAP
+                                        if (nap['type'] == 'cto' or nap['type'] == 'nap') and \
+                                                nap['coordinates'] == new_coordinate:
+                                            print(nap['name'])
+                                            router = routers[nap['name']]['router']
+                                            cable = routers[nap['name']]['cable']
+                                            coordinates = routers[nap['name']]['coordinates']
+                                            routers[nap['name']] = {
+                                                'start': nap['name'],
+                                                'end': nap['name'],
+                                                'router': router + [nap['name']],
+                                                'cable': cable,
+                                                'coordinates': coordinates + [nap['coordinates']],
+                                            }
+                                            break
 
-    routes = []
+                                        for l in range(len(cabos)):
+                                            if cabos[l]['coordinates'][-1] == nap['coordinates'] and cabos[l]['type'] == 'ramal':
+                                                router = routers[nap['name']]['router']
+                                                cable = routers[nap['name']]['cable']
+                                                coordinates = routers[nap['name']]['coordinates']
+                                                routers[cabos[l]['start']] = {
+                                                    'start': nap['name'],
+                                                    'end': cabos[l]['end'],
+                                                    'router': router + [cabos[l]['end']],
+                                                    'cable': cable + [cabos[l]['name']],
+                                                    'coordinates': coordinates + cabos[l]['coordinates'].split(),
+                                                }
+                                                routers[nap['name']]['end'] = cabos[l]['end']
+                                                break
+                                            else:
+                                                continue
+                                        break
 
-    # Para cada caixa de distribuição (NAP ou CEO)
-    for device in devices:
-        if device["type"] in ["nap", "ceo"]:
+                                        #routers[nap['name']]['router'] = new_router
 
-            # Cria uma rota para cada cabo conectado a esta caixa
-            for cable_name in device.get("cables", []):
-                cable = cable_dict[cable_name]
-
-                # Encontra o poste de origem e o de destino para o cabo
-                start_poste_name, end_poste_name = cable["coordinates"].strip().split()
-
-                # Verifica se a caixa está conectada a um dos postes
-                if start_poste_name == device.get("poste"):
-                    start_device = device_dict[start_poste_name]
-                    end_device = device_dict[end_poste_name]
-                elif end_poste_name == device.get("poste"):
-                    start_device = device_dict[end_poste_name]
-                    end_device = device_dict[start_poste_name]
-                else:
-                    # O cabo não está conectado a esta caixa, pular para o próximo
-                    continue
-
-                # Cria uma rota para o par de dispositivos encontrados
-                route = {
-                    "start": pop["name"],
-                    "end": device["name"],
-                    "router": [pop["name"]],
-                    "cable": [cable["name"]],
-                    "coordinates": [pop["coordinates"]],
-                }
-
-                # Adiciona os postes intermediários à rota
-                for intermediate_poste_name in cable["router"]:
-                    intermediate_poste = device_dict[intermediate_poste_name]
-                    route["router"].append(intermediate_poste_name)
-                    route["cable"].append(cable["name"])
-                    route["coordinates"].append(intermediate_poste["coordinates"])
-
-                # Adiciona a caixa final à rota
-                route["router"].append(device["name"])
-                route["coordinates"].append(device["coordinates"])
-
-                # Adiciona a rota à lista de rotas
-                routes.append(route)
-
-    return routes
+                                if end is None:
+                                    print(
+                                        f'Cabo {cabo["name"]} não conecta a nenhuma caixa de emenda óptica.'
+                                    )
+                                elif end == start:
+                                    print(
+                                        f'Cabo {cabo["name"]} conecta o POP diretamente à caixa {end}.'
+                                    )
+                                return routers

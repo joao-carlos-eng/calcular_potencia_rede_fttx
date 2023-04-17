@@ -28,7 +28,7 @@ def main():
     correct_coordinates(postes, caixas, cabos, raio)
 
     # Criar as rotas dos cabos com base nas linhas do arquivo KML
-    rotas = create_cable_routes(pop, cabos, bkbs, ceos, ramais)
+    rotas = create_cable_routes(pop, caixas, cabos)
 
     # Calcular as abordagens dos cabos com base nas caixas
     calculate_cable_approaches(caixas)
