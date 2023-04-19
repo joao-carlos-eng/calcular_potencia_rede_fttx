@@ -1,7 +1,7 @@
 from coordinate_correction import correct_coordinates
 from data_extraction import extract_cxs_and_cbs, extract_data
 from file_handling import read_kml
-from route_generator import create_cable_routes
+from route_generator import create_cables_routers
 from utilities import calculate_cable_approaches, simulate_signal_transmission
 
 
@@ -28,7 +28,7 @@ def main():
     correct_coordinates(postes, caixas, cabos, raio)
 
     # Criar as rotas dos cabos com base nas linhas do arquivo KML
-    rotas = create_cable_routes(pop, caixas, cabos)
+    rotas = create_cables_routers(pop, postes, cabos, caixas+ceos)
 
     # Calcular as abordagens dos cabos com base nas caixas
     calculate_cable_approaches(caixas)
