@@ -212,7 +212,9 @@ expected_routes = [
     },
 ]
 
-resultado = {cx['end']: cx for cx in create_cables_routers(pop, postes, cabos, caixas + ceos + hubs)}
+caixas_geral = caixas + ceos + hubs
+
+resultado = {cx['end']: cx for cx in create_cables_routers(pop, postes, cabos, caixas_geral)}
 esperado = {cx['end']: cx for cx in expected_routes}
 
 
@@ -223,3 +225,4 @@ def test_create_cable_routes():
     assert resultado['CX4'] == esperado['CX4']
     assert resultado['CX5'] == esperado['CX5']
     assert resultado['CX6'] == esperado['CX6']
+
