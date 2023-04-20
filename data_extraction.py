@@ -1,3 +1,4 @@
+# modulo data_extraction.py
 def placemark_coordinates(placemark):
     geometry = placemark.find('{http://www.opengis.net/kml/2.2}Point')
     if geometry is None:
