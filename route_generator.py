@@ -1,114 +1,126 @@
 # module route_generator.py
-def create_cables_routers(pop, postes, cabos, caixas):
-    # Inicializa variáveis
+
+def get_caixas_by_type(caixas, type_):
+    """Retorna uma lista de caixas com o tipo especificado."""
+    return [caixa for caixa in caixas if caixa['type'] == type_]
+
+
+def get_cabos_by_type(cabos, type_):
+    """Retorna uma lista de cabos com o tipo especificado."""
+    return [cabo for cabo in cabos if cabo['type'] == type_]
+
+
+def get_caixa_by_coordinate(caixas, coordinate):
+    """Retorna a caixa com a coordenada especificada, ou None se não houver nenhuma."""
+    for caixa in caixas:
+        if caixa['coordinates'] == coordinate:
+            return caixa
+    return None
+
+
+def get_poste_by_coordinate(postes, coordinate):
+    """Retorna o poste com a coordenada especificada, ou None se não houver nenhum."""
+    for poste in postes:
+        if poste['coordinates'] == coordinate:
+            return poste
+    return None
+
+
+def create_cables_routers(pop, poste_list, cabo_list, caixa_list):
     routers = []
-    ceos = [ceo for ceo in caixas if ceo['type'] == 'ceo']
-    hubs = [hub for hub in caixas if hub['type'] == 'hub']
-    naps = [nap for nap in caixas if nap['type'] == 'nap']
-    ramais = [ramal for ramal in cabos if ramal['type'] == 'ramal']
+    """Cria uma rota a partir do POP."""
+    router = [pop['name'].upper()]
+    coordinates = [pop['coordinates']]
+    start = pop['name']
+    cables = []
+    end = None
+
+    naps = get_caixas_by_type(caixa_list, 'nap') + get_caixas_by_type(caixa_list, 'cto')
+    ceos_hubs = get_caixas_by_type(caixa_list, 'ceo') + get_caixas_by_type(caixa_list, 'hub')
 
     # Busca cabos que partem do POP
-    for cabo in cabos:
+    for cabo in cabo_list:
         if cabo['type'] == 'bkb' and cabo['coordinates'].startswith(pop['coordinates']):
-            # iniciando uma nova rota
-            start = pop['name']
-            router_pop = [pop['name'].upper()]
-            cables_pop = [cabo['name'].capitalize()]
-            coordinates_clabe_pop = [pop['coordinates']]
-            end = None
+            cables.append(cabo['name'].capitalize())
+            router_bkb = list(router)
+            coordinates_bkb = list(coordinates)
 
-            print(f'cabo: {cabo["name"]}')
-            # percorre a lista de coordenadas procurando interceptações do cabo
+            # Percorre a lista de coordenadas procurando interceptações do cabo
             for coordinate in cabo['coordinates'].split():
 
-                # Percorre a lista de caixas procurando interceptações do cabo
-                # testar depois se é melhor fazer uma lista com todas as caixas
-                # testar depois essa situação
-                for caixa in naps:
-                    if caixa['coordinates'] == coordinate:
-                        print(f"router criada: {caixa['name']}", end=' ')
-                        router_caixa = list(router_pop)
-                        router_caixa.append(caixa['name'])
-                        coordinates_clabe_pop.append(caixa['coordinates'])
-                        end = caixa['name'].upper()
+                caixa = get_caixa_by_coordinate(naps, coordinate)
+                if caixa is not None:
+                    router_bkb.append(caixa['name'].upper())
+                    coordinates_bkb.append(caixa['coordinates'])
+                    end = caixa['name'].upper()
+                    routers.append({
+                        'start': start,
+                        'end': end,
+                        'router': router_bkb,
+                        'cable': cables,
+                        'coordinates': coordinates_bkb,
+                    })
+
+                for ceo_hub in ceos_hubs:
+                    if ceo_hub['coordinates'] == coordinate:
+                        router_bkb.append(ceo_hub['name'].upper())
+                        router_ceo_hub = list(router_bkb)
+                        coordinates_bkb.append(ceo_hub['coordinates'])
+                        coordinates_ceo_hub = list(coordinates_bkb)
+                        end = ceo_hub['name']
                         routers.append({
                             'start': start,
                             'end': end,
-                            'router': router_caixa,
-                            'cable': coordinates_clabe_pop,
-                            'coordinates': coordinates_clabe_pop,
-                        })
-                        print(routers[-1])
-                        break
-
-                # Percorre a lista de CEO+HUBs procurando interceptações do cabo
-                for ceo_hub in ceos + hubs:
-                    if ceo_hub['coordinates'] == coordinate:
-                        print(f"router criada: {ceo_hub['name'].upper()}")
-                        router_pop.append(ceo_hub['name'].upper())
-                        router_ceo_hub = list(router_pop)
-                        cable_ceo_hub = list(cables_pop)
-                        coordinates_clabe_pop.append(ceo_hub['coordinates'])
-                        coordinates_ceo_hub = list(coordinates_clabe_pop)
-                        routers.append({
-                            'start': start,
-                            'end': ceo_hub['name'],
                             'router': router_ceo_hub,
-                            'cable': cable_ceo_hub,
+                            'cable': cables,
                             'coordinates': coordinates_ceo_hub,
                         })
-                        print(routers[-1], '\n\n')
-                        end = ceo_hub['name']
 
-                        # Percorre a lista de cabos novamente procurando ramificações
+                        ramais = get_cabos_by_type(cabo_list, 'ramal')
                         for ramal in ramais:
+                            # verifica se oramal está invertido e corrige
                             if ramal['coordinates'].endswith(ceo_hub['coordinates']):
                                 ramal['coordinates'] = ramal['coordinates'].split()[::-1]
 
                             elif ramal['coordinates'].startswith(ceo_hub['coordinates']):
-                                router_ramal = list(router_ceo_hub)
-                                cable_ramal = list(cable_ceo_hub)
+                                router_ramal = list(router_bkb)
+                                cable_ramal = list(cables)
                                 cable_ramal.append(ramal['name'].capitalize())
-                                coordinates_ramal = list(coordinates_ceo_hub)
+                                coordinates_ramal = list(coordinates_bkb)
 
-                                print(f'ramal: {ramal["name"]}')
                                 for new_coordinate in ramal['coordinates'].split():
-                                    # Percorre a lista de NAPs procurando interceptações do ramal
-                                    for nap in naps:
-                                        # Se a caixa for do tipo CTO/NAP, cria rota até o NAP
-                                        if (nap['type'] == 'cto' or nap['type'] == 'nap') and \
-                                                nap['coordinates'] == new_coordinate:
-                                            print(f"router criada: {nap['name'].upper()}")
-                                            router_ramal.append(nap['name'].upper())
-                                            router_nap = list(router_ramal)
-                                            coordinates_ramal.append(nap['coordinates'])
-                                            coordinates_nap = list(coordinates_ramal)
-                                            end = nap['name'].upper()
-                                            routers.append({
-                                                'start': pop['name'],
-                                                'end': end,
-                                                'router': router_nap,
-                                                'cable': cable_ramal,
-                                                'coordinates': coordinates_nap,
-                                            })
-                                            print(routers[-1], '\n\n')
-                                            break
-                                    # Percorre a lista de postes procurando interceptações do ramal
-                                    for poste in postes:
+                                    caixa = get_caixa_by_coordinate(naps, new_coordinate)
+
+                                    if caixa is not None:
+                                        router_ramal.append(caixa['name'].upper())
+                                        router_nap = list(router_ramal)
+                                        coordinates_ramal.append(caixa['coordinates'])
+                                        coordinates_nap = list(coordinates_ramal)
+                                        end = caixa['name'].upper()
+                                        routers.append({
+                                            'start': start,
+                                            'end': end,
+                                            'router': router_nap,
+                                            'cable': cable_ramal,
+                                            'coordinates': coordinates_nap,
+                                        })
+
+                                    for poste in poste_list:
                                         if poste['coordinates'] == new_coordinate and \
                                                 poste['coordinates'] not in coordinates_ramal:
                                             router_ramal.append(poste['name'])
                                             coordinates_ramal.append(poste['coordinates'])
                                             break
 
-                for poste in postes:
-                    if poste['coordinates'] == coordinate and poste['coordinates'] not in coordinates_clabe_pop:
-                        router_pop.append(poste['name'])
-                        coordinates_clabe_pop.append(poste['coordinates'])
+                for poste in poste_list:
+                    if poste['coordinates'] == coordinate and poste['coordinates'] not in coordinates_bkb:
+                        router_bkb.append(poste['name'])
+                        coordinates_bkb.append(poste['coordinates'])
                         break
+
             if end is None:
-                print(
-                    f'Cabo {cabo["name"]} não conecta a nenhuma caixa de emenda óptica.')
+                print(f'Cabo {cabo["name"]} não conecta a nenhuma caixa de emenda óptica.')
             elif end == start:
                 print(f'Cabo {cabo["name"]} conecta o POP diretamente à caixa {end}.')
+
     return routers
