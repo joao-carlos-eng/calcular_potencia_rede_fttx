@@ -26,7 +26,6 @@ def test_calculate_cable_approaches():
     assert caixas[4]['abordagens'] == 2
     assert caixas[5]['abordagens'] == 3
 
-    print(caixas[0])
 
 
 def test_simulate_signal_transmission():
