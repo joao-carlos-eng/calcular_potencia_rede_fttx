@@ -40,13 +40,14 @@ def create_cables_routers(pop, poste_list, cabo_list, caixa_list):
 
     # Busca cabos que partem do POP
     for cabo in cabo_list:
-        if cabo['type'] == 'bkb' and cabo['coordinates'].startswith(pop['coordinates']):
+
+        if cabo['type'] == 'bkb' and cabo['coordinates'][0] == pop['coordinates'][0]:
             cables.append(cabo['name'].capitalize())
             router_bkb = list(router)
             coordinates_bkb = list(coordinates)
 
             # Percorre a lista de coordenadas procurando interceptações do cabo
-            for coordinate in cabo['coordinates'].split():
+            for coordinate in cabo['coordinates']:
 
                 caixa = get_caixa_by_coordinate(naps, coordinate)
                 if caixa is not None:
@@ -123,4 +124,7 @@ def create_cables_routers(pop, poste_list, cabo_list, caixa_list):
             elif end == start:
                 print(f'Cabo {cabo["name"]} conecta o POP diretamente à caixa {end}.')
 
+    for r in routers:
+        ...
+        #print(r)
     return routers
