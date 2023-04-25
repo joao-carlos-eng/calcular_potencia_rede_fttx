@@ -12,7 +12,7 @@ def calculate_cable_approaches(caixas, cabos):
     for caixa in caixas:
         abordagens = 0
         for cabo in cabos:
-            co = cabo['coordinates'].split(' ')
+            co = cabo['coordinates']
             if caixa['coordinates'] in co:
                 if co.index(caixa['coordinates']) == 0 or co.index(caixa['coordinates']) == len(co) - 1:
                     abordagens += 1
