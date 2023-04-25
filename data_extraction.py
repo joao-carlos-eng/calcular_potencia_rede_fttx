@@ -11,23 +11,18 @@ def extract_data(kml):
     postes = []
     bkbs = []
     ceos = []
-    placas = []
     ramais = []
-    cbs = []
-    cxs = []
     pop = None
 
     # Busca a pasta exemplo-rede-fttx
     rede_folder = kml.Document.Folder
-    print(f'rede_folder: {rede_folder.name.text}')
     for subfolder in rede_folder.Folder:
         subfolder_name = subfolder.name.text.lower()
-        print(f'subfolder_name: {subfolder_name}')
         if subfolder_name == 'fttx':
             fttx_folder = subfolder
             for placemark in fttx_folder.Placemark:
                 if placemark.name.text.lower() == 'pop':
-                    coordinates = placemark_coordinates(placemark)
+                    coordinates = [placemark_coordinates(placemark)]
                     pop = {
                         'name': placemark.name.text.strip(),
                         'coordinates': coordinates,
@@ -35,14 +30,13 @@ def extract_data(kml):
                     }
             for subsubfolder in fttx_folder.Folder:
                 subsubfolder_name = subsubfolder.name.text.lower()
-                print(f'subsubfolder_name: {subsubfolder_name}')
                 if subsubfolder_name == 'bkb':
                     for placemark in subsubfolder.Placemark:
                         try:
                             name = placemark.name.text.strip()
                         except AttributeError:
                             name = f'BKB {subsubfolder.index(placemark) + 1}'
-                        coordinates = placemark_coordinates(placemark)
+                        coordinates = placemark_coordinates(placemark).split(' ')
                         bkbs.append(
                             {
                                 'name': name,
@@ -57,8 +51,8 @@ def extract_data(kml):
                             name = placemark.name.text.strip()
                         except AttributeError:
                             name = f'CEO {subsubfolder.index(placemark) + 1}'
-                        coordinates = placemark_coordinates(placemark)
-                        type_ = 'ceo' if subsubfolder_name == 'ceos' else 'hub'
+                        coordinates = [placemark_coordinates(placemark)]
+                        type_ = 'ceo' if 'ceo' in subsubfolder_name.lower() else 'hub'
                         ceos.append(
                             {
                                 'name': name,
@@ -67,12 +61,11 @@ def extract_data(kml):
                             }
                         )
                 elif 'placa' in subsubfolder_name:
-                    placas.append(subsubfolder)
                     try:
                         for sub_placa in subsubfolder.Folder:
                             if (
-                                'ramal' in sub_placa.name.text.lower()
-                                or 'rede' in sub_placa.name.text.lower()
+                                    'ramal' in sub_placa.name.text.lower()
+                                    or 'rede' in sub_placa.name.text.lower()
                             ):
                                 ramal = {
                                     'cxs': [],
@@ -82,18 +75,10 @@ def extract_data(kml):
                                 }
                                 try:
                                     for sub_ramal in sub_placa.Folder:
-                                        sub_ramal_name = (
-                                            sub_ramal.name.text.lower()
-                                        )
+                                        sub_ramal_name = (sub_ramal.name.text.lower())
                                         if sub_ramal_name == 'cb':
-                                            for (
-                                                placemark
-                                            ) in sub_ramal.Placemark:
-                                                coordinates = (
-                                                    placemark_coordinates(
-                                                        placemark
-                                                    )
-                                                )
+                                            for (placemark) in sub_ramal.Placemark:
+                                                coordinates = placemark_coordinates(placemark).split(' ')
                                                 ramal['cbs'].append(
                                                     {
                                                         'name': placemark.name.text.strip(),
@@ -101,28 +86,17 @@ def extract_data(kml):
                                                         'type': 'cb',
                                                     }
                                                 )
-                                                cbs.append(
-                                                    ramal['cbs'][-1]
-                                                )  # verificar se é necessário
                                         elif sub_ramal_name in [
                                             'cx',
                                             'naps',
                                             'ctos',
                                         ]:
-                                            for (
-                                                placemark
-                                            ) in sub_ramal.Placemark:
+                                            for (placemark) in sub_ramal.Placemark:
                                                 try:
-                                                    name = (
-                                                        placemark.name.text.strip()
-                                                    )
+                                                    name = (placemark.name.text.strip())
                                                 except AttributeError:
                                                     name = f'CX {sub_ramal.index(placemark) + 1}'
-                                                coordinates = (
-                                                    placemark_coordinates(
-                                                        placemark
-                                                    )
-                                                )
+                                                coordinates = [placemark_coordinates(placemark)]
                                                 ramal['cxs'].append(
                                                     {
                                                         'name': name,
@@ -130,9 +104,6 @@ def extract_data(kml):
                                                         'type': 'nap',
                                                     }
                                                 )
-                                                cxs.append(
-                                                    ramal['cxs'][-1]
-                                                )  # verificar se é necessário
                                     ramais.append(ramal)
                                 except AttributeError:
                                     # erro quando não tem subpastas de ramais
@@ -141,13 +112,11 @@ def extract_data(kml):
                         # erro quando não tem subpastas de placas
                         pass
         elif subfolder_name == 'mapeamento' or subfolder_name == 'poste':
+            poste_pop = None
             try:
                 for placemark in subfolder.Placemark:
-                    try:
-                        name = placemark.name.text.strip()
-                    except AttributeError:
-                        name = f'Poste {subfolder.index(placemark) + 1}'
-                    coordinates = placemark_coordinates(placemark)
+                    name = f'Poste {subfolder.index(placemark) + 1}'
+                    coordinates = [placemark_coordinates(placemark)]
                     postes.append(
                         {
                             'name': name,
@@ -155,6 +124,14 @@ def extract_data(kml):
                             'type': 'poste',
                         }
                     )
+                    if coordinates == pop['coordinates']:
+                        poste_pop = postes[-1]
+                if not poste_pop:
+                    postes.append({
+                        'name': 'Poste POP',
+                        'coordinates': pop['coordinates'],
+                        'type': 'poste',
+                    })
             except AttributeError:
                 print('Não há postes no arquivo KML.')
 
@@ -163,10 +140,7 @@ def extract_data(kml):
         'postes': postes,
         'bkbs': bkbs,
         'ceos': ceos,
-        'placas': placas,
         'ramais': ramais,
-        'cbs': cbs,
-        'cxs': cxs,
     }
 
 
@@ -185,10 +159,50 @@ def extract_cxs_and_cbs(ramais):
     caixas = []
     cabos = []
     for ramal in ramais:
-        print(f'ramal: {ramal["name"]}')
         for cx in ramal['cxs']:
+            cx['name_audiencia'] = ramal['name'] + ': ' + cx['name']
             caixas.append(cx)
         for cb in ramal['cbs']:
+            cb['name_audiencia'] = ramal['name'] + ': ' + cb['name']
             cabos.append(cb)
 
     return caixas, cabos
+
+
+def validar_elementos(caixas, cabos):
+    """
+    Valida os elementos, verificando se todas as caixas estão em algum cabo e se
+    -os bkb's começam e terminam em uma CEO ou HUB
+    -os ramais começam em uma CEO e termina em uma NAP.
+
+    Args:
+        caixas: uma lista contendo as informações das caixas.
+        cabos: uma lista contendo as informações dos cabos.
+
+    Returns:
+        uma lista contendo os elementos validos
+    """
+    coords_caixas = [cx['coordinates'][0] for cx in caixas]
+    coords_cabos = [co for ca in cabos for co in ca['coordinates']]
+
+    coords_cabos = set(coords_cabos)
+    for cabo in cabos:
+        if cabo['type'] == 'bkb':
+            if cabo['coordinates'][0] not in coords_caixas:
+                print(f'Caixa inicial do {cabo["name"]} não encontrada')
+            if cabo['coordinates'][-1] not in coords_caixas:
+                print(f'Caixa final do {cabo["name"]} não encontrada')
+
+        elif cabo['type'] == 'ramal':
+            if cabo['coordinates'][0] not in coords_caixas:
+                print(f'Caixa {cabo["name"]} não encontrada')
+            else:
+                start = cabo['coordinates'][0]
+            if cabo['coordinates'][-1] not in coords_caixas:
+                print(f'Caixa {cabo["name"]} não encontrada')
+            else:
+                end = cabo['coordinates'][-1]
+
+    for caixa in caixas:
+        if caixa['coordinates'][0] not in coords_cabos:
+            print(f'Caixa {caixa["name"]} não encontrada')
