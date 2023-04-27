@@ -31,18 +31,18 @@ def main():
 
     # Extrair todas as caixas e trajetos dos ramais
     caixas, cabos = extract_cxs_and_cbs(ramais)
-    caixas = caixas + ceos
     cabos = bkbs + cabos
+    caixas = ceos + caixas
 
     # Corrigir as coordenadas das caixas e trajeto dos postes
     raio = 5.0  # Define o raio de aplicação do osnap
     correct_coordinates(postes, caixas, cabos, raio)
 
     # valida cabos e caixas
-    validar_elementos(caixas, cabos)
+    validar_elementos(caixas, cabos, pop)
 
     # Criar as rotas dos cabos com base nas linhas do arquivo KML
-    rotas = create_cables_routers(pop, postes, cabos, caixas + ceos)
+    rotas = create_cables_routers(pop, postes, cabos, caixas)
 
     # Calcular as abordagens dos cabos com base nas caixas
     calculate_cable_approaches(caixas, cabos)
