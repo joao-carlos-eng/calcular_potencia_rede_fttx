@@ -46,11 +46,15 @@ def extract_data(kml):
                             }
                         )
                 elif subsubfolder_name in ['ceos', 'hubs']:
+                    cnt = 0
                     for placemark in subsubfolder.Placemark:
+                        cnt += 1
                         try:
                             name = placemark.name.text.strip()
                         except AttributeError:
-                            name = f'CEO {subsubfolder.index(placemark) + 1}'
+                            name = None
+                        if name == 'HUB' or name is None:
+                            name = f'CEO {cnt}'
                         coordinates = [placemark_coordinates(placemark)]
                         type_ = 'ceo' if 'ceo' in subsubfolder_name.lower() else 'hub'
                         ceos.append(
@@ -75,15 +79,20 @@ def extract_data(kml):
                                 }
                                 try:
                                     for sub_ramal in sub_placa.Folder:
+                                        cnt = 0
                                         sub_ramal_name = (sub_ramal.name.text.lower())
                                         if sub_ramal_name == 'cb':
-                                            for (placemark) in sub_ramal.Placemark:
+                                            for placemark in sub_ramal.Placemark:
+                                                cnt += 1
+                                                name = placemark.name.text.strip()
+                                                if name == 'Caminho sem título' or not name:
+                                                    name = f'CB {cnt} - {ramal["name"]}'
                                                 coordinates = placemark_coordinates(placemark).split(' ')
                                                 ramal['cbs'].append(
                                                     {
-                                                        'name': placemark.name.text.strip(),
+                                                        'name': name,
                                                         'coordinates': coordinates,
-                                                        'type': 'cb',
+                                                        'type': 'ramal',
                                                     }
                                                 )
                                         elif sub_ramal_name in [
@@ -169,7 +178,7 @@ def extract_cxs_and_cbs(ramais):
     return caixas, cabos
 
 
-def validar_elementos(caixas, cabos):
+def validar_elementos(caixas, cabos, pop):
     """
     Valida os elementos, verificando se todas as caixas estão em algum cabo e se
     -os bkb's começam e terminam em uma CEO ou HUB
@@ -178,31 +187,50 @@ def validar_elementos(caixas, cabos):
     Args:
         caixas: uma lista contendo as informações das caixas.
         cabos: uma lista contendo as informações dos cabos.
+        pop: um dicionario contendo as informações do pop.
 
     Returns:
         uma lista contendo os elementos validos
     """
-    coords_caixas = [cx['coordinates'][0] for cx in caixas]
-    coords_cabos = [co for ca in cabos for co in ca['coordinates']]
+    coords_naps = [nap['coordinates'][0] for nap in caixas if nap['type'] == 'nap' or nap['type'] == 'cto']
+    coords_ceos = [hub['coordinates'][0] for hub in caixas if hub['type'] == 'hub' or hub['type'] == 'ceo']
 
-    coords_cabos = set(coords_cabos)
+    coords_bkb = [co for bkb in cabos if bkb['type'] == 'bkb' for co in bkb['coordinates']]
+    coords_ramais = [co for ramal in cabos if ramal['type'] == 'ramal' for co in ramal['coordinates']]
+
     for cabo in cabos:
+        start = cabo['coordinates'][0]
+        end = cabo['coordinates'][-1]
+        cx_start = False
+        cx_end = False
         if cabo['type'] == 'bkb':
-            if cabo['coordinates'][0] not in coords_caixas:
+
+            if start not in pop['coordinates'] and start not in coords_ceos:
                 print(f'Caixa inicial do {cabo["name"]} não encontrada')
-            if cabo['coordinates'][-1] not in coords_caixas:
+            else:
+                cx_start = True
+            if end not in coords_ceos and end not in coords_naps:
                 print(f'Caixa final do {cabo["name"]} não encontrada')
+            else:
+                cx_end = True
+            if cx_start and cx_end:
+                print(f'BKB {cabo["name"]} está conectado')
 
         elif cabo['type'] == 'ramal':
-            if cabo['coordinates'][0] not in coords_caixas:
-                print(f'Caixa {cabo["name"]} não encontrada')
+            if start not in coords_ceos and start not in coords_naps:
+                print(f'Caixa inicial do {cabo["name"]} não encontrada')
             else:
-                start = cabo['coordinates'][0]
-            if cabo['coordinates'][-1] not in coords_caixas:
-                print(f'Caixa {cabo["name"]} não encontrada')
+                cx_start = True
+            if end not in coords_naps:
+                print(f'Caixa final do {cabo["name"]} não encontrada')
             else:
-                end = cabo['coordinates'][-1]
+                cx_end = True
+
+            if cx_start and cx_end:
+                print(f'ramal {cabo["name"]} está conectado')
 
     for caixa in caixas:
-        if caixa['coordinates'][0] not in coords_cabos:
-            print(f'Caixa {caixa["name"]} não encontrada')
+        co = caixa['coordinates'][0]
+        if co not in coords_ramais and co not in coords_bkb:
+            print(f'Caixa {caixa["name"]} não encontrada em nenhum cabo')
+            print(f'caixa: {caixa["coordinates"][0].split(",")[1]},{caixa["coordinates"][0].split(",")[0]}')
