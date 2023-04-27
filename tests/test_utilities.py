@@ -27,13 +27,28 @@ def test_calculate_cable_approaches():
     assert caixas[5]['abordagens'] == 3
 
 
+test_signals = simulate_signal_transmission(pop, expected_routes, caixas, data_sheets, topology='1x128')
 
-def test_simulate_signal_transmission():
-    simulate_signal_transmission(pop, expected_routes, caixas, data_sheets, topology='1x128')
 
+def test_sinal_cx_passando_por_ceo_hub_e_nap():
     assert caixas[0]['sinal_final'] == round(sinal_cx1)
+
+
+def test_sinal_ultima_cx_da_rede():
     assert caixas[1]['sinal_final'] == round(sinal_cx2)
+
+
+def test_sinal_cx_apos_ceo():
     assert caixas[2]['sinal_final'] == round(sinal_cx3)
+
+
+def test_sinal_cx_mais_proxima_do_pop():
     assert caixas[3]['sinal_final'] == round(sinal_cx4)
+
+
+def test_sinal_na_ceo():
     assert caixas[4]['sinal_final'] == round(sinal_cx5)
+
+
+def test_sinal_na_hub():
     assert caixas[5]['sinal_final'] == round(sinal_cx6)
