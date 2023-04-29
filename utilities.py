@@ -11,12 +11,16 @@ def calculate_cable_approaches(caixas, cabos):
     """
     for caixa in caixas:
         abordagens = 0
+        coord_cx = caixa['coordinates'][0]
         for cabo in cabos:
             co = cabo['coordinates']
-            if caixa['coordinates'] in co:
-                if co.index(caixa['coordinates']) == 0 or co.index(caixa['coordinates']) == len(co) - 1:
+            if coord_cx in co:
+                if co[0] == coord_cx or co[-1] == coord_cx:
                     abordagens += 1
                 else:
+                    print(
+                        f'Caixa {caixa["name"]} abordada pelo cabo {cabo["name"]}, '
+                        f'no trecho {co.index(caixa["coordinates"][0])}')
                     abordagens += 2
         caixa['abordagens'] = abordagens
 
