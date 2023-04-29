@@ -15,15 +15,30 @@ sinal_cx4 = pop['signal'] - ((237 / 1000) * 0.35 + 4 * 0.3 + 5 * 0.1 + 10.5 + 13
 sinal_cx5 = pop['signal'] - ((150 / 1000) * 0.35 + 4 * 0.3 + 5 * 0.1 + 13.7)
 sinal_cx6 = pop['signal'] - ((60 / 1000) * 0.35 + 4 * 0.3 + 5 * 0.1 + 13.7)
 
+calculate_cable_approaches(caixas, cabos)
 
-def test_calculate_cable_approaches():
-    calculate_cable_approaches(caixas, cabos)
 
+def test_calculate_cable_approaches_cx_1():
     assert caixas[0]['abordagens'] == 2
+
+
+def test_calculate_cable_approaches_cx_2():
     assert caixas[1]['abordagens'] == 1
+
+
+def test_calculate_cable_approaches_cx_3():
     assert caixas[2]['abordagens'] == 2
+
+
+def test_calculate_cable_approaches_cx_4():
     assert caixas[3]['abordagens'] == 1
-    assert caixas[4]['abordagens'] == 2
+
+
+def test_calculate_cable_approaches_cx_5():
+    assert caixas[4]['abordagens'] == 3
+
+
+def test_calculate_cable_approaches_cx_6():
     assert caixas[5]['abordagens'] == 3
 
 
