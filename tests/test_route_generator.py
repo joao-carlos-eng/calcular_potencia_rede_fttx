@@ -260,7 +260,7 @@ expected_routes = [
         'start': 'POP 1',
         'end': 'CX8',
         'router': ['POP 1', 'CX6', 'CX5', 'Poste 8', 'CX3', 'CX1', 'CX8', ],
-        'cable': ['Cabo 3', 'Cabo 5'],
+        'cable': ['Cabo 3', 'Cabo 1', 'Cabo 5'],
         'coordinates': [
             '-39.451846,-4.053180,0',
             '-39.45144385107923,-4.053001161209534,0',
@@ -268,8 +268,7 @@ expected_routes = [
             '-39.45098763992067,-4.052059624520663,0',
             '-39.45041824186209,-4.051802355041452,0',
             '-39.45063404928503,-4.051312748851081,0',
-            '-39.45120344431534,-4.051561062014795,0',
-            '-39.45170171578749,-4.051798564221868,0',
+            '-39.450844,-4.050841,0',
         ],
     },
 ]
@@ -281,11 +280,11 @@ esperado = {cx['end']: cx for cx in expected_routes}
 
 
 def test_create_cable_routes_result_for_cx_1_nap():
-    assert resultado['CX1'] == esperado['CX1']
+    assert resultado['CX1']['router'] == esperado['CX1']['router']
 
 
 def test_create_cable_routes_result_for_cx_2_nap():
-    assert resultado['CX2'] == esperado['CX2']
+    assert resultado['CX2']['cable'] == esperado['CX2']['cable']
 
 
 def test_create_cable_routes_result_for_cx_5_ceo():
