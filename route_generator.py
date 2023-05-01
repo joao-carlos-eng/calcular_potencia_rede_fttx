@@ -1,18 +1,14 @@
 # module route_generator.py
 from copy import deepcopy
+import logging
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 
 def get_cabos_by_type(cabos, type_):
     """Retorna uma lista de cabos com o tipo especificado."""
     return [cabo for cabo in cabos if cabo['type'] == type_]
-
-
-def get_item_by_attribute(items, attribute, value):
-    """Retorna a caixa com o atributo especificado, ou None se não houver nenhuma."""
-    for item in items:
-        if item[attribute] == value:
-            return item
-    return None
 
 
 def get_item_by_coordinate(items, coordinate):
@@ -29,6 +25,7 @@ def create_router(element, router_reference=None):
     :param element: elemento que será adicionado a rota
     :return:
     """
+
     if router_reference is not None:
         start = router_reference['start']
         router = router_reference['router']
@@ -47,8 +44,15 @@ def create_router(element, router_reference=None):
             'cable': cable,
             'coordinates': new_coordinates,
         }
-# Se não houver uma rota de referência, cria uma rota
-# implementar esse trecho
+
+    else:
+        return {
+            'start': element['name'],
+            'end': element['name'],
+            'router': [element['name'].upper()],
+            'cable': [],
+            'coordinates': [element['coordinates'][0]],
+        }
 
 
 def get_router_by_end(routers, end, coordinates=False):
@@ -63,6 +67,15 @@ def get_router_by_end(routers, end, coordinates=False):
             if router['end'] == end:
                 return router
         return None
+
+
+def get_element_by_list_coordinates(coordinate, list_ceos=None, list_naps=None, poste_list=None):
+    if get_item_by_coordinate(list_ceos, coordinate):
+        return get_item_by_coordinate(list_ceos, coordinate)
+    elif get_item_by_coordinate(list_naps, coordinate):
+        return get_item_by_coordinate(list_naps, coordinate)
+    else:
+        return get_item_by_coordinate(poste_list, coordinate)
 
 
 def create_cables_routers(pop, poste_list, cabo_list, caixa_list):
@@ -89,18 +102,15 @@ def create_cables_routers(pop, poste_list, cabo_list, caixa_list):
             if cabo_end == pop['coordinates'][0]: cabo['coordinates'].reverse()
             router_master['cable'].append(cabo['name'].capitalize())
             for coordinate in cabo['coordinates'][1:]:
-                if get_item_by_coordinate(ceos_hubs, coordinate):
-                    element = get_item_by_coordinate(ceos_hubs, coordinate)
-                elif get_item_by_coordinate(naps, coordinate):
-                    element = get_item_by_coordinate(naps, coordinate)
-                else:
-                    element = get_item_by_coordinate(poste_list, coordinate)
+                element = get_element_by_list_coordinates(coordinate, list_ceos=ceos_hubs, list_naps=naps,
+                                                          poste_list=poste_list)
 
                 if element['type'] in ('nap', 'cto', 'ceo', 'hub'):
                     router = create_router(element, router_master)
+                    logging.info(f'router {router["end"]} criado a partir do POP')
                     routers.append(router)
 
-                elif element['type'] not in router_master['coordinates']:
+                elif element['type'] == 'poste' and element['coordinates'][0]:
                     router_master['router'].append(element['name'])
                     router_master['coordinates'].append(element['coordinates'][0])
             backbones.remove(cabo)
@@ -109,112 +119,72 @@ def create_cables_routers(pop, poste_list, cabo_list, caixa_list):
         cabo_start = cabo['coordinates'][0]  # coordenada inicial do cabo
         if get_router_by_end(routers, cabo_start, coordinates=True):  # verifica se existe uma rota que comece no
             # final de outra
-
             router_derivacao = deepcopy(get_router_by_end(routers, cabo_start, coordinates=True))
             router_derivacao['cable'].append(cabo['name'].capitalize())
             for coordinate in cabo['coordinates'][1:]:
-                if get_item_by_coordinate(ceos_hubs, coordinate):
-                    element = get_item_by_coordinate(ceos_hubs, coordinate)
-                elif get_item_by_coordinate(naps, coordinate):
-                    element = get_item_by_coordinate(naps, coordinate)
-                else:
-                    element = get_item_by_coordinate(poste_list, coordinate)
+                element = get_element_by_list_coordinates(coordinate, list_ceos=ceos_hubs, list_naps=naps,
+                                                          poste_list=poste_list)
 
                 if element['type'] in ('nap', 'cto', 'ceo', 'hub'):
-                    print(f'{element["name"]} abordada pelo cabo {cabo["name"]}#2')
                     router = create_router(element, router_derivacao)
+                    logging.info(f'router {router["end"]} criado a partir de {router_derivacao["end"]}')
                     routers.append(router)
-                    print('router: ', router)
 
-                elif element['type'] not in router_derivacao['coordinates']:
-                    print(f'{element["name"]} abordada pelo cabo {cabo["name"]}#3')
+                elif element['type'] == 'poste' and element['coordinates'][0]:
                     router_derivacao['router'].append(element['name'])
                     router_derivacao['coordinates'].append(element['coordinates'][0])
             backbones.remove(cabo)
+            del router_derivacao
+
+    # segundo bloco, rotas a partir dos ceos/hubs
+    ramais = get_cabos_by_type(cabo_list, 'ramal')
+    # Busca cabos que partem das ceos/hubs
+    for cabo in reversed(ramais):
+        cabo_start = cabo['coordinates'][0]  # coordenada inicial do cabo
+        if get_router_by_end(routers, cabo_start, coordinates=True):
+            router_ramal = deepcopy(get_router_by_end(routers, cabo_start, coordinates=True))
+            router_ramal['cable'].append(cabo['name'].capitalize())
+            for coordinate in cabo['coordinates'][1:]:
+                element = get_element_by_list_coordinates(coordinate, list_ceos=ceos_hubs, list_naps=naps,
+                                                          poste_list=poste_list)
+
+                if element['type'] in ('nap', 'cto', 'ceo', 'hub'):
+                    router = create_router(element, router_ramal)
+                    logging.info(f'router {router["end"]} criado a partir de {router_ramal["end"]}')
+                    routers.append(router)
+
+                elif element['type'] == 'poste' and element['coordinates'][0]:
+                    router_ramal['router'].append(element['name'])
+                    router_ramal['coordinates'].append(element['coordinates'][0])
+            ramais.remove(cabo)
+            del router_ramal
+
+    # Busca cabos que partem das naps
+    for cabo in reversed(ramais):
+        cabo_start = cabo['coordinates'][0]
+        if get_router_by_end(routers, cabo_start, coordinates=True):
+            router_ramal = deepcopy(get_router_by_end(routers, cabo_start, coordinates=True))
+            router_ramal['cable'].append(cabo['name'].capitalize())
+            for coordinate in cabo['coordinates'][1:]:
+                element = get_element_by_list_coordinates(coordinate, list_ceos=ceos_hubs, list_naps=naps,
+                                                          poste_list=poste_list)
+
+                if element['type'] in ('nap', 'cto', 'ceo', 'hub'):
+                    router = create_router(element, router_ramal)
+                    logging.info(f'router {router["end"]} criado a partir de {router_ramal["end"]}')
+                    routers.append(router)
+
+                elif element['type'] == 'poste' and element['coordinates'][0]:
+                    router_ramal['router'].append(element['name'])
+                    router_ramal['coordinates'].append(element['coordinates'][0])
+            ramais.remove(cabo)
+            del router_ramal
+
+    for cabo in backbones:
+        if cabo:
+            print('Cabo não utilizado: {}'.format(cabo['name']))
+    for cabo in ramais:
+        if cabo:
+            print('Cabo não utilizado: {}'.format(cabo['name']))
+
     return routers
-
-# segundo bloco, rotas a partir dos ceos/hubs
-# Busca cabos que partem das ceos/hubs
-
-
-'''ramais = get_cabos_by_type(cabo_list, 'ramal')
-for ramal in ramais:
-    end = None
-    ramal_start = ramal['coordinates'][0]
-    ramal_end = ramal['coordinates'][-1]
-    ceo_hub = get_item_by_coordinate(ceos_hubs, ramal_start)
-    # verifica se o ramal está invertido e corrige
-    if ramal_end in [caixa['coordinates'][0] for caixa in ceos_hubs]:
-        print(f'Cabo do ramal {ramal["name"]} invertido. Corrigindo...')
-        ramal['coordinates'] = ramal['coordinates'][::-1]
-        ramal_start = ramal['coordinates'][0]
-        ceo_hub = get_item_by_coordinate(ceos_hubs, ramal_start)
-
-    elif ceo_hub is not None:
-        print(f'Ramal {ramal["name"]} interceptado pela ceo {ceo_hub["name"]}#4')
-        aux = get_router_by_end(routers, ceo_hub['name'])
-        router_ramal = list(aux['router'])
-        cable_ramal = list(aux['cable'])
-        cable_ramal.append(ramal['name'].capitalize())
-        coordinates_ramal = list(aux['coordinates'])
-
-        for coordinate in ramal['coordinates'][1:]:
-            caixa = get_item_by_coordinate(naps, coordinate)
-            if caixa is not None:
-                print(f'Caixa {caixa["name"]} interceptada pelo cabo {ramal["name"]}#5')
-                router_ramal.append(caixa['name'].upper())
-                router_nap = list(router_ramal)
-                coordinates_ramal.append(caixa['coordinates'][0])
-                coordinates_nap = list(coordinates_ramal)
-                end = caixa['name'].upper()
-                routers.append(
-                    create_router(start, end, router_nap, cable_ramal, coordinates_nap)
-                )
-            poste = get_item_by_coordinate(poste_list, coordinate)
-            if poste is not None and poste['coordinates'][0] not in coordinates_ramal:
-                router_ramal.append(poste['name'])
-                coordinates_ramal.append(poste['coordinates'][0])
-            
-            for derivacao in ramais:
-                if derivacao['coordinates'][0] == new_coordinate and derivacao != ramal:
-                    for cord_derivacao in derivacao['coordinates'][1:]:
-                        caixa = get_item_by_coordinate(naps, cord_derivacao)
-                        if caixa is not None:
-                            print(
-                                f'Caixa {caixa["name"]} '
-                                f'interceptada pelo cabo {derivacao["name"]}#6')
-                            router_derivacao = list(router_nap)
-                            cable_derivacao = list(cable_ramal)
-                            cable_derivacao.append(derivacao['name'].capitalize())
-                            coordinates_derivacao = list(coordinates_nap)
-                            router_derivacao.append(caixa['name'].upper())
-                            coordinates_derivacao.append(caixa['coordinates'][0])
-                            end = caixa['name'].upper()
-                            routers.append(
-                                create_router(start, end, router_derivacao, cable_derivacao,
-                                              coordinates_derivacao)
-                            )
-                            break
-                    break
-        
-    derivacoes = get_cabos_by_type(cabo_list, 'bkb')
-    for derivacao in derivacoes:
-        if derivacao['coordinates'][0] == ceo_hub['coordinates'][0] and derivacao != cabo:
-            for cord_derivacao in derivacao['coordinates'][1:]:
-                caixa = get_item_by_coordinate(ceos_hubs, cord_derivacao)
-                if caixa is not None:
-                    print(f'Caixa {caixa["name"]} interceptada pelo cabo {derivacao["name"]}#7')
-                    router_derivacao = list(router_ceo_hub)
-                    cable_derivacao = list(cables)
-                    cable_derivacao.append(derivacao['name'].capitalize())
-                    coordinates_derivacao = list(coordinates_ceo_hub)
-                    router_derivacao.append(caixa['name'].upper())
-                    coordinates_derivacao.append(caixa['coordinates'][0])
-                    end = caixa['name'].upper()
-                    routers.append(
-                        create_router(start, end, router_derivacao, cable_derivacao,
-                                      coordinates_derivacao)
-                    )
-                    break
-            break
-        break'''
