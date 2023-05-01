@@ -1,5 +1,6 @@
 # module utilities.py
 from coordinate_correction import distancia_dois_pontos
+import logging
 
 
 def calculate_cable_approaches(caixas, cabos):
@@ -18,10 +19,8 @@ def calculate_cable_approaches(caixas, cabos):
                 if co[0] == coord_cx or co[-1] == coord_cx:
                     abordagens += 1
                 else:
-                    print(
-                        f'Caixa {caixa["name"]} abordada pelo cabo {cabo["name"]}, '
-                        f'no trecho {co.index(caixa["coordinates"][0])}')
                     abordagens += 2
+
         caixa['abordagens'] = abordagens
 
 
@@ -100,14 +99,18 @@ def simulate_signal_transmission(pop, rotas, caixas, data_sheets, topology):
 
             # Calcular perdas por conector
             connector_loss_total = calculate_connector_loss(connector_count, connector_loss)
+            logging.info(f"Caixa {caixa['name']}: Perda por conector = {connector_loss_total} dBm")
 
             splice_loss_total = calculate_splice_loss(splice_count, splice_loss)
+            logging.info(f"Caixa {caixa['name']}: Perda por emenda = {splice_loss_total} dBm")
 
             cable_loss_total = calculate_cable_loss(cable_length, cable_attenuation)
+            logging.info(f"Caixa {caixa['name']}: Perda por cabo = {cable_loss_total} dBm")
 
+            logging.info(f"Caixa {caixa['name']}: Perda por splitter = {splitter_loss_total} dBm")
         total_loss = (connector_loss_total + splice_loss_total + cable_loss_total + splitter_loss_total)
         final_signal = calculate_final_signal(initial_signal, total_loss)
 
-        caixa['sinal_final'] = round(final_signal)
+        caixa['sinal_final'] = round(final_signal, 2)
 
-        print(f"Caixa {caixa['name']}: Sinal final = {final_signal} dBm")
+        logging.info(f"Caixa {caixa['name']}: Sinal final = {final_signal} dBm")
