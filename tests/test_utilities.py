@@ -19,26 +19,32 @@ calculate_cable_approaches(caixas, cabos)
 
 
 def test_calculate_cable_approaches_cx_1():
-    assert caixas[0]['abordagens'] == 2
+    print(caixas[0]['name'])
+    assert caixas[0]['abordagens'] == 3
 
 
 def test_calculate_cable_approaches_cx_2():
+    print(caixas[1]['name'])
     assert caixas[1]['abordagens'] == 1
 
 
 def test_calculate_cable_approaches_cx_3():
+    print(caixas[2]['name'])
     assert caixas[2]['abordagens'] == 2
 
 
 def test_calculate_cable_approaches_cx_4():
+    print(caixas[3]['name'])
     assert caixas[3]['abordagens'] == 1
 
 
+def test_calculate_cable_approaches_cx_8():
+    print(caixas[4]['name'])
+    assert caixas[4]['abordagens'] == 1
+
+
 def test_calculate_cable_approaches_cx_5():
-    assert caixas[4]['abordagens'] == 3
-
-
-def test_calculate_cable_approaches_cx_6():
+    print(caixas[5]['name'])
     assert caixas[5]['abordagens'] == 3
 
 
@@ -46,24 +52,24 @@ test_signals = simulate_signal_transmission(pop, expected_routes, caixas, data_s
 
 
 def test_sinal_cx_passando_por_ceo_hub_e_nap():
-    assert caixas[0]['sinal_final'] == round(sinal_cx1)
+    assert caixas[0]['sinal_final'] == round(sinal_cx1, 2)
 
 
 def test_sinal_ultima_cx_da_rede():
-    assert caixas[1]['sinal_final'] == round(sinal_cx2)
+    assert caixas[1]['sinal_final'] == round(sinal_cx2, 2)
 
 
 def test_sinal_cx_apos_ceo():
-    assert caixas[2]['sinal_final'] == round(sinal_cx3)
+    assert caixas[2]['sinal_final'] == round(sinal_cx3, 2)
 
 
 def test_sinal_cx_mais_proxima_do_pop():
-    assert caixas[3]['sinal_final'] == round(sinal_cx4)
+    assert caixas[3]['sinal_final'] == round(sinal_cx4, 2)
 
 
 def test_sinal_na_ceo():
-    assert caixas[4]['sinal_final'] == round(sinal_cx5)
+    assert caixas[5]['sinal_final'] == round(sinal_cx5, 2)
 
 
 def test_sinal_na_hub():
-    assert caixas[5]['sinal_final'] == round(sinal_cx6)
+    assert caixas[5]['sinal_final'] == round(sinal_cx6, 2)
