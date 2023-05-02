@@ -25,26 +25,27 @@ def calculate_cable_approaches(caixas, cabos):
 
 
 def calculate_connector_loss(connector_count, connector_loss):
-    return connector_count * connector_loss
+    return round(connector_count * connector_loss, 2)
 
 
 def calculate_splice_loss(splice_count, splice_loss):
-    return splice_count * splice_loss
+    return round(splice_count * splice_loss, 2)
 
 
 def calculate_cable_loss(cable_length, cable_attenuation):
-    return cable_length * cable_attenuation
+    return round(cable_length * cable_attenuation, 2)
 
 
 def calculate_final_signal(initial_signal, total_loss):
-    return initial_signal - total_loss
+    return round(initial_signal - total_loss, 2)
 
 
-def get_caixa_by_name(caixas, caixa_name):
+def get_caixa_by_coordinate(caixas, coordinate):
+    """Retorna a caixa com a coordenada especificada, ou None se não houver nenhuma."""
     for caixa in caixas:
-        if caixa['name'] == caixa_name:
+        if caixa['coordinates'][0] == coordinate:
             return caixa
-    return {'type': None}
+    return {'type': 'poste'}
 
 
 def simulate_signal_transmission(pop, rotas, caixas, data_sheets, topology):
@@ -58,59 +59,50 @@ def simulate_signal_transmission(pop, rotas, caixas, data_sheets, topology):
     hub_splitter = ds['Splitter_1x16'] if topology == '1x128' else ds['Splitter_1x8']
     nap_splitter = ds['Splitter_1x8']
 
-    for caixa in caixas:
+    for rota in rotas:
+        caixa = get_caixa_by_coordinate(caixas, rota['coordinates'][-1])
         # Inicializar perdas
-        connector_loss_total = 0
-        splice_loss_total = 0
-        cable_loss_total = 0
         splitter_loss_total = 0
 
-        # Encontrar a rota que conecta a caixa atual
-        rota_caixa = None
-        for rota in rotas:
-            if rota['end'] == caixa['name']:
-                rota_caixa = rota
-                break
+        # calcular perdas e sinal final para cada caixa
+        connector_count = 4
+        splice_count = 2  # 1 em cada extremidade do cabo
+        splitter_loss_total += hub_splitter
+        # Calcule o comprimento do cabo com base nas coordenadas das rotas
+        coords = rota['coordinates']
+        cable_length = round(sum(distancia_dois_pontos(coords[i], coords[i + 1])
+                                 for i in range(len(coords) - 1)) / 1000, 2)  # Converter para km
+        for coordinate in rota['coordinates'][1:]:
+            elemento = get_caixa_by_coordinate(caixas, coordinate)
+            if elemento['type'] == 'hub':
+                splice_count += 2
+                cable_length += 0.015 if rota['coordinates'][-1] == coordinate else 0.03
 
-        if rota_caixa:
-            # calcular perdas e sinal final para cada caixa
-            connector_count = 4
-            splice_count = 2  # 1 em cada extremidade do cabo
 
-            # Calcule o comprimento do cabo com base nas coordenadas das rotas
-            coords = rota_caixa['coordinates']
-            cable_length = sum(distancia_dois_pontos(coords[i], coords[i + 1])
-                               for i in range(len(coords) - 1)) / 1000  # Converter para km
-            for caixa_name in rota_caixa['router']:
-                if get_caixa_by_name(caixas, caixa_name)['type'] == 'hub':
-                    splice_count += 2
-                    # Adicionar 10m para cada hub
-                    cable_length += 0.01 if rota_caixa['router'][-1] == caixa_name else 0.02
-                    splitter_loss_total += hub_splitter
+            elif elemento['type'] == 'ceo':
+                cable_length += 0.03  # Adicionar 20m para o CEO
 
-                elif get_caixa_by_name(caixas, caixa_name)['type'] == 'ceo':
-                    splice_count += 1
-                    cable_length += 0.02  # Adicionar 20m para o CEO
-                elif get_caixa_by_name(caixas, caixa_name)['type'] == 'nap':
-                    splice_count += 1
-                    # Adicionar 10m para cada NAP
-                    cable_length += 0.01 if caixa_name == caixa['name'] else 0.02
-                    splitter_loss_total += nap_splitter if caixa_name == caixa['name'] else 0
+            elif elemento['type'] == 'nap':
+                splice_count += 1  # Adicionar 10m para cada NAP
+                cable_length += 0.01 if rota['coordinates'][-1] == coordinate else 0.02
+                splitter_loss_total += nap_splitter if rota['coordinates'][-1] == coordinate else 0
 
-            # Calcular perdas por conector
-            connector_loss_total = calculate_connector_loss(connector_count, connector_loss)
-            logging.info(f"Caixa {caixa['name']}: Perda por conector = {connector_loss_total} dBm")
+        # Calcular perdas por conector
+        connector_loss_total = calculate_connector_loss(connector_count, connector_loss)
 
-            splice_loss_total = calculate_splice_loss(splice_count, splice_loss)
-            logging.info(f"Caixa {caixa['name']}: Perda por emenda = {splice_loss_total} dBm")
+        splice_loss_total = calculate_splice_loss(splice_count, splice_loss)
 
-            cable_loss_total = calculate_cable_loss(cable_length, cable_attenuation)
-            logging.info(f"Caixa {caixa['name']}: Perda por cabo = {cable_loss_total} dBm")
+        cable_loss_total = calculate_cable_loss(cable_length, cable_attenuation)
 
-            logging.info(f"Caixa {caixa['name']}: Perda por splitter = {splitter_loss_total} dBm")
         total_loss = (connector_loss_total + splice_loss_total + cable_loss_total + splitter_loss_total)
         final_signal = calculate_final_signal(initial_signal, total_loss)
 
         caixa['sinal_final'] = round(final_signal, 2)
 
-        logging.info(f"Caixa {caixa['name']}: Sinal final = {final_signal} dBm")
+        logging.info(f"Caixa {caixa['name']}-{caixa['coordinates']}: \n"
+                     f"Sinal final = {final_signal} dBm\n"
+                     f"({initial_signal} - {total_loss})\n"
+                     f"({connector_loss_total} + {splice_loss_total} + {cable_loss_total} + {splitter_loss_total})\n"
+                     f"({connector_count} * {connector_loss} + {splice_count} * {splice_loss} + {cable_length} * "
+                     f"{cable_attenuation} + {splitter_loss_total})\n"
+                     f"({total_loss})\n\n")
