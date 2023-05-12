@@ -18,10 +18,10 @@ def extract_data(kml):
     rede_folder = kml.Document.Folder
     for subfolder in rede_folder.Folder:
         subfolder_name = subfolder.name.text.lower()
-        if subfolder_name == 'fttx':
+        if 'ftt' in subfolder_name:
             fttx_folder = subfolder
             for placemark in fttx_folder.Placemark:
-                if placemark.name.text.lower() == 'pop':
+                if 'pop' in placemark.name.text.lower():
                     coordinates = [placemark_coordinates(placemark)]
                     pop = {
                         'name': placemark.name.text.strip(),
@@ -141,8 +141,18 @@ def extract_data(kml):
                         'coordinates': pop['coordinates'],
                         'type': 'poste',
                     })
+                print(f'Foram encontrados {len(postes)} postes.')
             except AttributeError:
                 print('Não há postes no arquivo KML.')
+
+    if pop is None:
+        info_pop = input('Informe o nome do POP: ')
+        coordinates_pop = input('Informe as coordenadas do POP: ')
+        pop = {
+            'name': info_pop,
+            'coordinates': coordinates_pop,
+            'type': 'pop',
+        }
 
     return {
         'pop': pop,
