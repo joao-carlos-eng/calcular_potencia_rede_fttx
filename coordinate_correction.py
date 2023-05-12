@@ -79,10 +79,19 @@ def correct_coordinates(postes, caixas, cabos, raio):
     # Corrigir as coordenadas das caixas
     kml_caixas = auditoria.newfolder(name='Caixas')
     for caixa in caixas:
+        print(caixa)
+        co = caixa['coordinates'][0].split(',')
         caixa['poste'] = [None]
         caixa['coordinates'] = apply_osnap(postes, caixa, raio)
-        co = caixa['coordinates'][0].split(',')
-        kml_caixas.newpoint(name=caixa['name'], coords=[(float(co[0]), float(co[1]))])
+        pnt = kml_caixas.newpoint(name=caixa['name'], coords=[(float(co[0]), float(co[1]))])
+        pnt.style.iconstyle.scale = 1
+        try:
+            co = caixa['coordinates'][0].split(',')
+            pnt.coords = [(float(co[0]), float(co[1]))]
+            pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/pushpin/grn-pushpin.png'
+        except IndexError:
+            pnt.description = 'Nenhum poste encontrado para a coordenada: ' + ','.join(co)
+            pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png'
 
     # Corrigir o trajeto dos cabos
     kml_cabos = auditoria.newfolder(name='Cabos')
@@ -97,5 +106,8 @@ def correct_coordinates(postes, caixas, cabos, raio):
     kml_postes = auditoria.newfolder(name='Postes')
     for poste in postes:
         co = poste['coordinates'][0].split(',')
-        kml_postes.newpoint(name=poste['name'], coords=[(float(co[0]), float(co[1]))])
+        pnt = kml_postes.newpoint(name=poste['name'], coords=[(float(co[0]), float(co[1]))])
+        pnt.style.iconstyle.scale = 0.8
+        pnt.style.iconstyle.labelstyle.scale = 0
+        pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
     auditoria.save('auditoria.kml')
